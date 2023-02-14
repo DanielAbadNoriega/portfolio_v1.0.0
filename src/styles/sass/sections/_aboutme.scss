@@ -1,0 +1,14 @@
+#aboutme-section {
+  background: url("../../../assets/imgs/sections/aboutme/aboutme.png") no-repeat center;
+  background-size: cover;
+  height: 35vh;
+  article {
+    padding-left: 5px;
+    color: white;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
