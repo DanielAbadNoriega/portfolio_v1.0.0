@@ -1,27 +1,70 @@
 @use "../variables/v-typografy.scss" as typografy;
+@use "../variables/v-colors.scss" as colors;
 
 $mobile-breakpoint: 600px;
 $tablet-breakpoint: 768px;
 $laptop-breakpoint: 992px;
 $large-laptop-breakpoint: 1200px;
+$xl-laptop-breakpoint: 1445px;
+$xxl-laptop-breakpoint: 2000px;
 
 #aboutme-section {
   margin-top: 5vh;
-  background: url("../../../assets/imgs/sections/aboutme/aboutme.png") no-repeat
-    center;
-  background-size: cover;
-  height: 60vh;
+  background: url("../../../assets/imgs/sections/aboutme/aboutme.png") center;
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: 50% -20vh;
+    attachment: fixed;
+  }
+  height: 70vh;
   padding: 5px;
+
   article {
-    color: white;
+    color: colors.$primary-light;
+    span{
+      color: var(--secondary-light);
+      font-family: typografy.$font-html;
+      margin-left: 1.5%;
+      position: relative;
+
+      &:nth-last-of-type(1){
+        bottom: 2%;
+        left: -1%;
+      }
+      &:nth-last-of-type(2){
+        top: 3%;
+        left: -1%;
+      }
+    }
     h2 {
       font-family: typografy.$font-h2;
       font-size: typografy.$text-headline;
+      opacity: 0.5;
+      margin-top: 1%;
+      margin-bottom: 1%;
+      margin-left: 2%;
     }
     p {
       margin: 0;
       font-family: typografy.$font-body;
       font-size: typografy.$text-base;
+
+      &:first-of-type::before{
+        content: "<p>";
+        color: var(--secondary-light);
+        font-family: typografy.$font-html;
+        position: relative;
+      }
+
+      &:last-child::after {
+        content: "</p>";
+        color: var(--secondary-light);
+        font-family: typografy.$font-html;
+        float: inline-end;
+        position: relative;
+        left: 2%;
+      }
     }
   }
   img {
@@ -38,39 +81,74 @@ $large-laptop-breakpoint: 1200px;
 
 @media screen and (min-width: $mobile-breakpoint) {
   #aboutme-section {
-    height: 65vh;
+    height: 75vh;
   }
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
   #aboutme-section {
-    height: 70vh;
+    img{
+      width: 75%
+    }
   }
 }
 
 @media screen and (min-width: $laptop-breakpoint) {
   #aboutme-section {
-    height: 75vh;
+    img{
+      width: 65%
+    }
   }
 }
 
 @media screen and (min-width: $large-laptop-breakpoint) {
   #aboutme-section {
     height: 50vh;
-    article{
+    article {
       padding-left: 5px;
       padding-right: 5px;
       align-self: flex-start;
-      width: 50%;
-      h2{
+      width: 40%;
+      h2 {
         margin-top: 0;
         font-size: typografy.$text-headline-lg;
+      }
+      p {
+        
+        font-size: typografy.$text-base-lg;
+      }
+    }
+    img {
+      width: 50%;
+    }
+  }
+
+  .container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: $xl-laptop-breakpoint) {
+  #aboutme-section {
+    height: 70vh;
+    article {
+      p {
+        align-self: start;
+        font-size: typografy.$text-base-xl;
       }
     }
   }
 
   .container{
-    flex-direction: row;
+    gap: 8vw;
   }
+}
 
+@media screen and (min-width: $xxl-laptop-breakpoint) {
+  #aboutme-section {
+    height: 80vh;
+    img {
+      width: 65%;
+    }
+  }
 }
