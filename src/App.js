@@ -1,10 +1,9 @@
-import AboutmeContainer from "./components/sections/container/aboutmeContainer/aboutmeContainer";
-
+import SectionsContainer from "./components/sections/container/sectionsContainer";
 
 function App() {
   return (
     <div className="App">
-      <AboutmeContainer></AboutmeContainer>
+      <SectionsContainer></SectionsContainer>
     </div>
   );
 }

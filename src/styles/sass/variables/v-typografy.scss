@@ -1,0 +1,39 @@
+/* FONT FAMILY */
+$font-body: OpenSans-Light, sans-serif;
+$font-h2: OpenSans-Bold, sans-serif;
+$font-h1: OpenSans-ExtraBold, sans-serif;
+
+/* FONT SIZES */
+
+$text-caption: 12px;
+$text-note: 16px; /* etiquetas */
+$text-base: 18px; /* <p> */
+$text-subheader: 20px; /* <nav> */
+$text-title: 26px;
+$text-headline: 30px; /* <h2> */
+$text-display: 40px; /* <h1> */
+$text-jumbo: 50px;
+
+/* MIN-WIDTH: 1200PX */
+$text-headline-lg: 56px; /* <h2> */
+$text-display-lg: 68px; /* <h1> */
+
+$font-path: "../../fonts/Open_Sans/static/OpenSans/";
+$OpenSans-light: $font-path + "OpenSans-Light.ttf";
+$OpenSans-bold: $font-path + "OpenSans-Bold.ttf";
+$OpenSans-ExtraBold: $font-path + "OpenSans-ExtraBold.ttf";
+
+@font-face {
+  font-family: OpenSans-Light;
+  src: url($OpenSans-light);
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url($OpenSans-bold);
+}
+
+@font-face {
+  font-family: OpenSans-Extrabold;
+  src: url($OpenSans-ExtraBold);
+}

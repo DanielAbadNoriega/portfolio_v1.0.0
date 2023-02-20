@@ -1,14 +1,76 @@
+@use "../variables/v-typografy.scss" as typografy;
+
+$mobile-breakpoint: 600px;
+$tablet-breakpoint: 768px;
+$laptop-breakpoint: 992px;
+$large-laptop-breakpoint: 1200px;
+
 #aboutme-section {
-  background: url("../../../assets/imgs/sections/aboutme/aboutme.png") no-repeat center;
+  margin-top: 5vh;
+  background: url("../../../assets/imgs/sections/aboutme/aboutme.png") no-repeat
+    center;
   background-size: cover;
-  height: 35vh;
+  height: 60vh;
+  padding: 5px;
   article {
-    padding-left: 5px;
     color: white;
+    h2 {
+      font-family: typografy.$font-h2;
+      font-size: typografy.$text-headline;
+    }
+    p {
+      margin: 0;
+      font-family: typografy.$font-body;
+      font-size: typografy.$text-base;
+    }
+  }
+  img {
+    width: 80%;
   }
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: $mobile-breakpoint) {
+  #aboutme-section {
+    height: 65vh;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  #aboutme-section {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: $laptop-breakpoint) {
+  #aboutme-section {
+    height: 75vh;
+  }
+}
+
+@media screen and (min-width: $large-laptop-breakpoint) {
+  #aboutme-section {
+    height: 50vh;
+    article{
+      padding-left: 5px;
+      padding-right: 5px;
+      align-self: flex-start;
+      width: 50%;
+      h2{
+        margin-top: 0;
+        font-size: typografy.$text-headline-lg;
+      }
+    }
+  }
+
+  .container{
+    flex-direction: row;
+  }
+
 }
