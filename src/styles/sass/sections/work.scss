@@ -3,16 +3,20 @@
 @use "../variables/v-breakpoints.scss" as media;
 @use "../mixins/sections.scss" as _mixins;
 
-#aboutme-section {
+#work-section{
   margin-top: 20vh;
 }
 
-.aboutme-container {
+.work-container {
   @include _mixins.section(
-    url("../../../assets/imgs/sections/aboutme/aboutme.png")
+    url("../../../assets/imgs/sections/projects/desktop.jpg")
   );
+  height: auto;
+  flex-direction: column;
+  justify-content: space-between;
   article {
     color: colors.$primary-light;
+    align-self: flex-start;
     span {
       @include _mixins.span-h2();
     }
@@ -31,38 +35,36 @@
       }
     }
   }
-  img {
-    width: 400px;
-  }
 }
 
-@media screen and (min-width: media.$mobile-breakpoint) {
-  #aboutme-section {
-    height: 75vh;
-    img{
-      width: 60%;
-    }
+.work-cards-container{
+  display: flex;
+  flex-wrap: wrap
+}
+
+.work-card{
+  @include _mixins.glassmorphism();
+  img{
+    margin-top: 1rem ;
+  }
+  hr{
+    border-color: colors.$primary-light;
+    background-color: colors.$primary-light;
+    width: 90%;
+    border-radius: 1px;
+    height: 3px;
   }
 }
 
 @media screen and (min-width: media.$laptop-breakpoint) {
-  #aboutme-section {
-    img {
-      width: 700px;
-    }
-  }
 }
 
 @media screen and (min-width: media.$large-laptop-breakpoint) {
-  #aboutme-section {
-    height: 65vh;
+  #work-section {
     flex-direction: row;
     justify-content: space-between;
     article {
-      padding-left: 5px;
-      padding-right: 5px;
-      align-self: flex-start;
-      width: 40%;
+      align-self: start;
       h2 {
         margin-top: 0;
         font-size: typografy.$text-headline-lg;
@@ -71,15 +73,11 @@
         font-size: typografy.$text-base-lg;
       }
     }
-    img {
-      margin: auto auto;
-    }
   }
 }
 
 @media screen and (min-width: media.$xl-laptop-breakpoint) {
-  #aboutme-section {
-    gap: 8vw;
+  #work-section {
     article {
       p {
         font-size: typografy.$text-base-xl;
