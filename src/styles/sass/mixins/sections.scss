@@ -7,7 +7,6 @@
   background: {
     size: cover;
     repeat: no-repeat;
-    position: 50% -20vh;
     attachment: fixed;
   }
   height: 70vh;
@@ -40,6 +39,7 @@
 ) {
   font-family: $font;
   font-size: $fontSize;
+  color: colors.$primary;
   opacity: 0.5;
   margin-top: 1%;
   margin-bottom: 1%;

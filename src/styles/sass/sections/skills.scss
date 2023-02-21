@@ -1,0 +1,31 @@
+@use "../variables/v-colors.scss" as colors;
+@use "../mixins/sections.scss" as _mixins;
+
+#skills-section {
+  margin-top: 20vh;
+}
+
+.skills-container {
+  @include _mixins.section(url("../../../assets/imgs/sections/skills/stones.jpg"));
+  article {
+    color: colors.$primary-light;
+    width: 100%;
+    span {
+      @include _mixins.span-h2();
+    }
+    h2 {
+      @include _mixins.section-h2();
+    }
+    p {
+      @include _mixins.section-p();
+
+      &:first-of-type::before {
+        @include _mixins.section-p-first();
+      }
+
+      &:last-child::after {
+        @include _mixins.section-p-second();
+      }
+    }
+  }
+}
