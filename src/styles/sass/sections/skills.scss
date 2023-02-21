@@ -1,4 +1,6 @@
+@use "../variables/v-typografy.scss" as typografy;
 @use "../variables/v-colors.scss" as colors;
+@use "../variables/v-breakpoints.scss" as media;
 @use "../mixins/sections.scss" as _mixins;
 
 #skills-section {
@@ -6,7 +8,9 @@
 }
 
 .skills-container {
-  @include _mixins.section(url("../../../assets/imgs/sections/skills/stones.jpg"));
+  @include _mixins.section(
+    url("../../../assets/imgs/sections/skills/stones.jpg")
+  );
   article {
     color: colors.$primary-light;
     width: 100%;
@@ -25,6 +29,102 @@
 
       &:last-child::after {
         @include _mixins.section-p-second();
+      }
+    }
+  }
+  div{
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.skills{
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+  margin: auto auto;
+}
+
+#html-skill{
+  grid-area: 1 / 1 / 2 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+#css-skill{
+  grid-area: 1 / 2 / 2 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+#js-skill{
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+#react-skill{
+  grid-area: 1 / 3 / 2 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+#git-skill{
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+#html-skill:hover {
+ background-image: url("../../../assets/imgs/iconos_languages/html_hover.png");
+}
+#css-skill:hover {
+  background-image: url("../../../assets/imgs/iconos_languages/css_hover.png");
+}
+#js-skill:hover {
+  background-image: url("../../../assets/imgs/iconos_languages/js_hover.png");
+}
+#react-skill:hover {
+  background-image: url("../../../assets/imgs/iconos_languages/react_hover.png");
+}
+#git-skill:hover {
+  background-image: url("../../../assets/imgs/iconos_languages/git_hover.png");
+}
+
+
+@media screen and (min-width: media.$mobile-breakpoint) {
+  #skills-section {
+    height: 75vh;
+  }
+}
+
+@media screen and (min-width: media.$laptop-breakpoint) {
+}
+
+@media screen and (min-width: media.$large-laptop-breakpoint) {
+  #skills-section {
+    height: 65vh;
+    flex-direction: row;
+    justify-content: space-between;
+    article {
+      padding-left: 5px;
+      padding-right: 5px;
+      align-self: flex-start;
+      width: 40%;
+      h2 {
+        margin-top: 0;
+        font-size: typografy.$text-headline-lg;
+      }
+      p {
+        font-size: typografy.$text-base-lg;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: media.$xl-laptop-breakpoint) {
+  #aboutme-section {
+    gap: 8vw;
+    article {
+      p {
+        align-self: start;
+        font-size: typografy.$text-base-xl;
       }
     }
   }

@@ -17,11 +17,11 @@ const SkillsContainer = () => {
         </p>
       </article>
       <div className='skills'>
-        <img src={html} alt='html-skill'/>
-        <img src={css} alt='css-skill'/>
-        <img src={js} alt='js-skill'/>
-        <img src={react} alt='react-skill'/>
-        <img src={git} alt='git-skill'/>
+        <img id='html-skill' src={html} alt='html-skill'/>
+        <img id='css-skill' src={css} alt='css-skill'/>
+        <img id='js-skill' src={js} alt='js-skill'/>
+        <img id='react-skill' src={react} alt='react-skill'/>
+        <img id='git-skill' src={git} alt='git-skill'/>
       </div>
     </section>
   );
