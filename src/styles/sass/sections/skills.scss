@@ -21,7 +21,7 @@
       @include _mixins.span-h2();
     }
     h2 {
-      @include _mixins.section-h2();
+      @include _mixins.section-title();
     }
     p {
       @include _mixins.section-p();
@@ -89,6 +89,8 @@
 #git-skill:hover {
   background-image: url("../../../assets/imgs/iconos_languages/git_hover.png");
 }
+
+/* MEDIA QUERIES */
 
 @media screen and (min-width: media.$mobile-breakpoint) {
   #skills-section {

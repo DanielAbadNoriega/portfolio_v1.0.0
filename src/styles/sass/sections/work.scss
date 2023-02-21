@@ -3,7 +3,7 @@
 @use "../variables/v-breakpoints.scss" as media;
 @use "../mixins/sections.scss" as _mixins;
 
-#work-section{
+#work-section {
   margin-top: 20vh;
 }
 
@@ -21,7 +21,7 @@
       @include _mixins.span-h2();
     }
     h2 {
-      @include _mixins.section-h2();
+      @include _mixins.section-title();
     }
     p {
       @include _mixins.section-p();
@@ -37,17 +37,22 @@
   }
 }
 
-.work-cards-container{
+.work-cards-container {
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: .5rem;
 }
 
-.work-card{
+.work-card {
   @include _mixins.glassmorphism();
-  img{
-    margin-top: 1rem ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    margin-top: 1rem;
   }
-  hr{
+  hr {
     border-color: colors.$primary-light;
     background-color: colors.$primary-light;
     width: 90%;
@@ -56,8 +61,15 @@
   }
 }
 
-@media screen and (min-width: media.$laptop-breakpoint) {
+.work-card-rrss {
+  position: absolute;
+  bottom: 0;
+  img {
+    margin: 1rem;
+  }
 }
+
+/* MEDIA QUERIES */
 
 @media screen and (min-width: media.$large-laptop-breakpoint) {
   #work-section {

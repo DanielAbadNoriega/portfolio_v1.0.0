@@ -1,5 +1,7 @@
 import React from "react";
 import inProgress from "../../../../assets/imgs/sections/projects/developing.png";
+import git from "../../../../assets/imgs/iconos_rrss/icono_git.png";
+import domain from "../../../../assets/imgs/iconos_rrss/icono_www.png";
 
 const WorkContainer = () => {
   return (
@@ -14,6 +16,7 @@ const WorkContainer = () => {
           <br />
         </p>
       </article>
+
       <div className="work-cards-container">
         <div className="work-card">
           <img src={inProgress} alt="portfolio-html" />
@@ -22,24 +25,30 @@ const WorkContainer = () => {
             First portfolio what i developed in html, css and javascript. Here
             is my evolution of my skills.
           </p>
+          <div className="work-card-rrss">
+            <img src={git} alt="git" />
+            <img src={domain} alt="domain" />
+          </div>
         </div>
 
         <div className="work-card">
           <img src={inProgress} alt="portfolio-html" />
           <hr></hr>
-          <p>
-            First portfolio what i developed in html, css and javascript. Here
-            is my evolution of my skills.
-          </p>
+          <p>lorem ipsum</p>
+          <div className="work-card-rrss">
+            <img src={git} alt="git" />
+            <img src={domain} alt="domain" />
+          </div>
         </div>
 
         <div className="work-card">
           <img src={inProgress} alt="portfolio-html" />
           <hr></hr>
-          <p>
-            First portfolio what i developed in html, css and javascript. Here
-            is my evolution of my skills.
-          </p>
+          <p>Lorem impsum</p>
+          <div className="work-card-rrss">
+            <img src={git} alt="git" />
+            <img src={domain} alt="domain" />
+          </div>
         </div>
       </div>
     </section>

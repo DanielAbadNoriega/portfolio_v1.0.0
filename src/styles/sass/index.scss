@@ -2,9 +2,10 @@
 @use "./base/reset";
 
 /* LAYOUT */
-@use "layout/body.scss";
+@use "layout/body";
+@use "layout/footer";
 
 /* SECTIONS */
-@use "sections/aboutme.scss";
-@use "sections/skills.scss";
-@use "sections/work.scss";
+@use "sections/aboutme";
+@use "sections/skills";
+@use "sections/work";

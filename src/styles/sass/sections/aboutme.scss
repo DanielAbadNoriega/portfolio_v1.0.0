@@ -17,7 +17,7 @@
       @include _mixins.span-h2();
     }
     h2 {
-      @include _mixins.section-h2();
+      @include _mixins.section-title();
     }
     p {
       @include _mixins.section-p();
@@ -35,6 +35,8 @@
     width: 400px;
   }
 }
+
+/* MEDIA QUERIES */
 
 @media screen and (min-width: media.$mobile-breakpoint) {
   #aboutme-section {
