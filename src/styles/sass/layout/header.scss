@@ -1,0 +1,57 @@
+@use "../variables/v-typografy.scss" as typografy;
+@use "../variables/v-colors.scss" as colors;
+@use "../variables/v-breakpoints.scss" as media;
+@use "../mixins/sections.scss" as _mixins;
+
+#header-section {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 2rem;
+  h1 {
+    margin-left: 2%;
+    color: colors.$primary-light;
+    font-size: typografy.$text-display;
+    font-family: typografy.$font-title;
+    span {
+      color: colors.$primary;
+    }
+
+    &:first-of-type:before {
+      @include _mixins.header-h1-first();
+    }
+
+    &:nth-of-type(1):after {
+      @include _mixins.header-h1-second();
+    }
+  }
+
+  img {
+    height: 30%;
+    margin: auto auto;
+  }
+}
+
+@media screen and (min-width: media.$tablet-breakpoint) {
+  #header-section {
+    h1 {
+      font-size: typografy.$text-display-md;
+    }
+  }
+}
+
+@media screen and (min-width: media.$laptop-breakpoint) {
+  #header-section {
+    h1 {
+      font-size: typografy.$text-display-lg;
+    }
+  }
+}
+
+@media screen and (min-width: media.$large-laptop-breakpoint) {
+  #header-section {
+    h1 {
+      font-size: typografy.$text-display-xl;
+    }
+  }
+}
