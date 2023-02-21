@@ -3,7 +3,7 @@ import perfilDan from "../../../../assets/imgs/sections/aboutme/perfil.png";
 
 const AboutmeContainer = () => {
   return (
-    <section id="aboutme-section" className="container">
+    <section id="aboutme-section" className="aboutme-container">
       <article>
         <span>&lt;h2&gt;</span>
         <h2>About me</h2>

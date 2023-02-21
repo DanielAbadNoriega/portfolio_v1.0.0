@@ -1,0 +1,79 @@
+@use "../variables/v-typografy.scss" as typografy;
+@use "../variables/v-colors.scss" as colors;
+@use "../variables/v-breakpoints.scss" as media;
+
+@mixin section($url) {
+  background: $url center;
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: 50% -20vh;
+    attachment: fixed;
+  }
+  height: 70vh;
+  padding: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin span-h2($color: colors.$secondary-light, $font: typografy.$font-html) {
+  color: $color;
+  font-family: $font;
+  margin-left: 1.5%;
+  position: relative;
+
+  &:nth-last-of-type(1) {
+    bottom: 2%;
+    left: -1%;
+  }
+  &:nth-last-of-type(2) {
+    top: 3%;
+    left: -1%;
+  }
+}
+
+@mixin section-h2(
+  $font: typografy.$font-title,
+  $fontSize: typografy.$text-headline
+) {
+  font-family: $font;
+  font-size: $fontSize;
+  opacity: 0.5;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
+@mixin section-p(
+  $font: typografy.$font-body-boldItalic,
+  $fontSize: typografy.$text-base
+) {
+  margin: 0;
+  margin-left: 1%;
+  font-family: $font;
+  font-size: $fontSize;
+}
+
+@mixin section-p-first(
+  $color: colors.$secondary-light,
+  $font: typografy.$font-html
+) {
+  content: "<p>";
+  color: $color;
+  font-family: $font;
+  position: relative;
+}
+
+@mixin section-p-second(
+  $color: colors.$secondary-light,
+  $font: typografy.$font-html
+) {
+  content: "<p>";
+  color: $color;
+  font-family: $font;
+  float: inline-end;
+  position: relative;
+  left: 2%;
+}

@@ -1,7 +1,8 @@
 /* FONT FAMILY */
 $font-body: OpenSans-Light, sans-serif;
-$font-h2: OpenSans-Bold, sans-serif;
-$font-h1: OpenSans-ExtraBold, sans-serif;
+$font-body-bold: OpenSans-Bold, sans-serif;
+$font-body-boldItalic: OpenSans-BoldItalic, sans-serif;
+$font-title: OpenSans-ExtraBold, sans-serif;
 $font-html: Anthony-Hartman-Italic, "La Belle Aurore";
 
 /* FONT SIZES */
@@ -21,14 +22,16 @@ $text-headline-lg: 56px; /* <h2> */
 $text-display-lg: 68px; /* <h1> */
 
 /* MIN-WIDTH: 1400PX */
-$text-base-xl: 24px; /* <p> */
+$text-base-xl: 22px; /* <p> */
 $text-headline-xl: 60px; /* <h2> */
 $text-display-xl: 94px; /* <h1> */
 
 $font-path-OpenSans: "../../fonts/Open_Sans/static/OpenSans/";
+$font-path-OpenSans-Condensed: "../../fonts/Open_Sans/static/OpenSans_Condensed/";
 $font-path-Anthony: "../../fonts/anthony_hartman/Anthony";
 $OpenSans-light: $font-path-OpenSans + "OpenSans-Light.ttf";
 $OpenSans-bold: $font-path-OpenSans + "OpenSans-Bold.ttf";
+$OpenSans-boldItalic: $font-path-OpenSans-Condensed + "OpenSans_Condensed-BoldItalic2.ttf";
 $OpenSans-ExtraBold: $font-path-OpenSans + "OpenSans-ExtraBold.ttf";
 $Anthony-Italic: $font-path-Anthony + "\ Hartman\ Italic.ttf";
 
@@ -39,6 +42,11 @@ $Anthony-Italic: $font-path-Anthony + "\ Hartman\ Italic.ttf";
 
 @font-face {
   font-family: OpenSans-Bold;
+  src: url($OpenSans-bold);
+}
+
+@font-face {
+  font-family: OpenSans-BoldItalic;
   src: url($OpenSans-bold);
 }
 

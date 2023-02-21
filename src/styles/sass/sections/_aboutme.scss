@@ -1,109 +1,64 @@
 @use "../variables/v-typografy.scss" as typografy;
 @use "../variables/v-colors.scss" as colors;
-
-$mobile-breakpoint: 600px;
-$tablet-breakpoint: 768px;
-$laptop-breakpoint: 992px;
-$large-laptop-breakpoint: 1200px;
-$xl-laptop-breakpoint: 1445px;
-$xxl-laptop-breakpoint: 2000px;
+@use "../variables/v-breakpoints.scss" as media;
+@use "../mixins/sections.scss" as _mixins;
 
 #aboutme-section {
   margin-top: 5vh;
-  background: url("../../../assets/imgs/sections/aboutme/aboutme.png") center;
-  background: {
-    size: cover;
-    repeat: no-repeat;
-    position: 50% -20vh;
-    attachment: fixed;
-  }
-  height: 70vh;
-  padding: 5px;
+}
 
+.aboutme-container {
+  @include _mixins.section(
+    url("../../../assets/imgs/sections/aboutme/aboutme.png")
+  );
   article {
     color: colors.$primary-light;
-    span{
-      color: var(--secondary-light);
-      font-family: typografy.$font-html;
-      margin-left: 1.5%;
-      position: relative;
-
-      &:nth-last-of-type(1){
-        bottom: 2%;
-        left: -1%;
-      }
-      &:nth-last-of-type(2){
-        top: 3%;
-        left: -1%;
-      }
+    span {
+      @include _mixins.span-h2();
     }
     h2 {
-      font-family: typografy.$font-h2;
-      font-size: typografy.$text-headline;
-      opacity: 0.5;
-      margin-top: 1%;
-      margin-bottom: 1%;
-      margin-left: 2%;
+      @include _mixins.section-h2();
     }
     p {
-      margin: 0;
-      font-family: typografy.$font-body;
-      font-size: typografy.$text-base;
+      @include _mixins.section-p();
 
-      &:first-of-type::before{
-        content: "<p>";
-        color: var(--secondary-light);
-        font-family: typografy.$font-html;
-        position: relative;
+      &:first-of-type::before {
+        @include _mixins.section-p-first();
       }
 
       &:last-child::after {
-        content: "</p>";
-        color: var(--secondary-light);
-        font-family: typografy.$font-html;
-        float: inline-end;
-        position: relative;
-        left: 2%;
+        @include _mixins.section-p-second();
       }
     }
   }
   img {
-    width: 80%;
+    width: 400px;
   }
 }
 
-.container {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (min-width: $mobile-breakpoint) {
+@media screen and (min-width: media.$mobile-breakpoint) {
   #aboutme-section {
     height: 75vh;
+    img{
+      width: 60%;
+    }
   }
+
 }
 
-@media screen and (min-width: $tablet-breakpoint) {
+@media screen and (min-width: media.$laptop-breakpoint) {
   #aboutme-section {
-    img{
-      width: 75%
+    img {
+      width: 700px;
     }
   }
 }
 
-@media screen and (min-width: $laptop-breakpoint) {
+@media screen and (min-width: media.$large-laptop-breakpoint) {
   #aboutme-section {
-    img{
-      width: 65%
-    }
-  }
-}
-
-@media screen and (min-width: $large-laptop-breakpoint) {
-  #aboutme-section {
-    height: 50vh;
+    height: 65vh;
+    flex-direction: row;
+    justify-content: space-between;
     article {
       padding-left: 5px;
       padding-right: 5px;
@@ -114,41 +69,23 @@ $xxl-laptop-breakpoint: 2000px;
         font-size: typografy.$text-headline-lg;
       }
       p {
-        
         font-size: typografy.$text-base-lg;
       }
     }
     img {
-      width: 50%;
+      margin: auto auto;
     }
-  }
-
-  .container {
-    flex-direction: row;
   }
 }
 
-@media screen and (min-width: $xl-laptop-breakpoint) {
+@media screen and (min-width: media.$xl-laptop-breakpoint) {
   #aboutme-section {
-    height: 70vh;
+    gap: 8vw;
     article {
       p {
         align-self: start;
         font-size: typografy.$text-base-xl;
       }
-    }
-  }
-
-  .container{
-    gap: 8vw;
-  }
-}
-
-@media screen and (min-width: $xxl-laptop-breakpoint) {
-  #aboutme-section {
-    height: 80vh;
-    img {
-      width: 65%;
     }
   }
 }
