@@ -1,6 +1,8 @@
 import React from "react";
+import PropTypes from 'prop-types';
+import SkillModalBody from "../skillsModalBody/skillModalBody";
 
-const SkillModal = ({name}) => {
+const SkillModal = ({ name, content }) => {
   return (
     <div
       className="modal fade"
@@ -11,9 +13,10 @@ const SkillModal = ({name}) => {
     >
       <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered">
         <div className="modal-content">
+          {/* HEADER */}
           <div className="modal-header">
             <h1 className="modal-title fs-5" id={`${name}-skill-modalLabel`}>
-              Modal title
+              {name.toUpperCase()}
             </h1>
             <button
               type="button"
@@ -22,7 +25,10 @@ const SkillModal = ({name}) => {
               aria-label="Close"
             ></button>
           </div>
-          <div className="modal-body">...</div>
+          {/* BODDY */}
+          {/* <div className="modal-body">...</div> */}
+          <SkillModalBody content={content}></SkillModalBody>
+          {/* FOOTER */}
           <div className="modal-footer">
             <button
               type="button"
@@ -40,5 +46,10 @@ const SkillModal = ({name}) => {
     </div>
   );
 };
+
+SkillModal.propTypes = {
+  name: PropTypes.string.isRequired,
+  content: PropTypes.object.isRequired,
+}
 
 export default SkillModal;

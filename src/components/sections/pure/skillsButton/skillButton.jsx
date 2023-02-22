@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SkillButton = ({name, img}) => {
   return (
     <button
-          id={`btn-${name}-skill`}
+          //id={`btn-${name}-skill`}
           className="btn-skill"
           data-bs-toggle="modal"
           data-bs-target={`#${name}-skill-modal`}
@@ -12,5 +13,10 @@ const SkillButton = ({name, img}) => {
         </button>
   );
 }
+
+SkillButton.propTypes = {
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+};
 
 export default SkillButton;

@@ -12,22 +12,40 @@ const SkillsContainer = () => {
     {
       name: "html",
       img: html,
+      content: {
+        Basics: "links, tables, Iframes, Responsive...",
+        Forms: "Attributes, elements, input types and attibutes and input form Attributes.",
+        Media: "Media, Video and Audio.",
+        APIs: "Geolacation, Drag/Drop, Web Storage..."
+      }
     },
     {
       name: "css",
       img: css,
+      content: {
+        
+      }
     },
     {
       name: "js",
       img: js,
+      content: {
+        
+      }
     },
     {
       name: "react",
       img: react,
+      content: {
+        
+      }
     },
     {
       name: "git",
       img: git,
+      content: {
+        
+      }
     },
   ];
 
@@ -46,14 +64,13 @@ const SkillsContainer = () => {
       <div className="skills">
         {skills.map((skill, index) => {
           return (
-            <>
+            <div key={index} className={`container-${skill.name}-skill`}>
               <SkillButton
-                key={index}
                 name={skill.name}
                 img={skill.img}
               ></SkillButton>
-              <SkillModal key={index} name={skill.name}></SkillModal>
-            </>
+              <SkillModal key={index} name={skill.name} content={skill.content}></SkillModal>
+            </div>
           );
         })}
       </div>
