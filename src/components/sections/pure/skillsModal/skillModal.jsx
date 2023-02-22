@@ -5,7 +5,7 @@ import SkillModalBody from "../skillsModalBody/skillModalBody";
 const SkillModal = ({ name, content }) => {
   return (
     <div
-      className="modal fade"
+      className="modal modal-sm modal-lg fade"
       id={`${name}-skill-modal`}
       tabIndex="-1"
       aria-labelledby={`${name}-skill-modalLabel`}
