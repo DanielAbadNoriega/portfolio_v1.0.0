@@ -10,9 +10,6 @@
   font-size: typografy.$text-headline;
   color: $color;
   font-family: $font;
-  position: absolute;
-  top: -2.2rem;
-/*   left: 1rem; */
 }
 
 @mixin header-h1-second(
@@ -23,7 +20,6 @@
   font-size: typografy.$text-headline;
   color: $color;
   font-family: $font;
-  float: inline-end;
   position: relative;
   left: 2%;
 }
@@ -79,7 +75,7 @@
 
 @mixin section-p(
   $font: typografy.$font-body-boldItalic,
-  $fontSize: typografy.$text-base
+  $fontSize: typografy.$text-base-xs
 ) {
   margin: 0;
   margin-left: 1%;

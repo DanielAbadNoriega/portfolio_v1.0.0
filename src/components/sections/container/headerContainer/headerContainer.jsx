@@ -6,7 +6,7 @@ const HeaderContainer = () => {
   return (
     <header id="header-section" className="header-container">
       <h1>
-        {" "}
+        {" "}<br/>
         Hi,
         <br /> I'm Daniel,
         <br />

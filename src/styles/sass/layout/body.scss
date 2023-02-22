@@ -1,3 +1,6 @@
-body{
+@use "../variables/v-breakpoints.scss" as media;
+@use "../variables/v-typografy.scss" as typografy;
+
+body {
   background-color: #f5f5f5;
 }

@@ -32,11 +32,30 @@
     }
   }
   img {
-    width: 400px;
+    width: 50%;
   }
 }
 
 /* MEDIA QUERIES */
+
+@media screen and (min-width: media.$s-mobile-breakpoint) {
+  #aboutme-section {
+    p{
+      font-size: typografy.$text-base-s;
+    }
+    img {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (min-width: media.$mobile-breakpoint) {
+  #aboutme-section {
+    p{
+      font-size: typografy.$text-base;
+    }
+  }
+}
 
 @media screen and (min-width: media.$mobile-breakpoint) {
   #aboutme-section {

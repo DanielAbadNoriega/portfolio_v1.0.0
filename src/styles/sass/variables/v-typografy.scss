@@ -7,6 +7,15 @@ $font-html: Anthony-Hartman-Italic, "La Belle Aurore";
 
 /* FONT SIZES */
 
+/* MIN-WIDTH: 390PX */
+$text-base-xs: 12px; /* <p> */
+$text-display-xs: 18px; /* <h1> */
+
+/* MIN-WIDTH: 450PX */
+$text-base-s: 16px; /* <p> */
+$text-display-s: 24px; /* <h1> */
+
+/* MIN-WIDTH: 600PX */
 $text-caption: 12px;
 $text-note: 16px; /* etiquetas */
 $text-base: 18px; /* <p> */

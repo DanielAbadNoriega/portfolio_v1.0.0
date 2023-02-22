@@ -47,7 +47,7 @@
   border: none;
   img {
     cursor: pointer;
-    width: 110px;
+    width: 80px;
   }
 }
 
@@ -107,9 +107,20 @@
 
 /* MEDIA QUERIES */
 
+@media screen and (min-width: media.$s-mobile-breakpoint) {
+  #skills-section{
+    p{
+      font-size: typografy.$text-base-s;
+    }
+  }
+}
+
 @media screen and (min-width: media.$mobile-breakpoint) {
   #skills-section {
     height: 75vh;
+    p{
+      font-size: typografy.$text-base;
+    }
   }
   .btn-skill{
     img{
@@ -143,6 +154,11 @@
   }
   .skills{
     margin-left: 15%;
+  }
+  .btn-skill{
+    img{
+      width: 110px;
+    }
   }
 }
 
