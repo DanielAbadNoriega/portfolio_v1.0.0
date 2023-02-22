@@ -8,9 +8,26 @@ const FooterContainer = () => {
     <footer id="footer" className="footer-container">
       <h3>Contact me</h3>
       <div className="footer-rss">
-        <img src={git} alt="github-DanielAbadNoriega" />
-        <img src={linkedin} alt="github-DanielAbadNoriega" />
-        <img src={gmail} alt="github-DanielAbadNoriega" />
+        <a
+          href="https://github.com/DanielAbadNoriega"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={git} alt="github-DanielAbadNoriega" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/danielabadnoriega"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img src={linkedin} alt="linkedin-DanielAbadNoriega" />
+        </a>
+
+        <a href="mailto:daniel.abad.noriega@gmail.com" target="_top">
+          <img src={gmail} alt="gmail-DanielAbadNoriega"/>
+         <p>daniel.abad.noriega@gmail.com</p>
+        </a>
       </div>
     </footer>
   );

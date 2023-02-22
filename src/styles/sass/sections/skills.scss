@@ -6,11 +6,9 @@
 #skills-section {
   margin-top: 20vh;
 }
-
+/* url("../../../assets/imgs/sections/skills/stones.jpg") */
 .skills-container {
-  @include _mixins.section(
-    url("../../../assets/imgs/sections/skills/stones.jpg")
-  );
+  @include _mixins.section(url("../../../assets/imgs/backgrounds/slashes.jpg"));
   flex-direction: row;
   article {
     color: colors.$primary-light;
@@ -35,11 +33,6 @@
       }
     }
   }
-  div {
-    img {
-      cursor: pointer;
-    }
-  }
 }
 
 .skills {
@@ -48,29 +41,37 @@
   margin: auto auto;
 }
 
-#html-skill {
+.btn-skill {
+  background-color: transparent;
+  border: none;
+  img {
+    cursor: pointer;
+  }
+}
+
+#btn-html-skill {
   grid-area: 1 / 1 / 2 / 3;
   align-self: center;
   justify-self: center;
 }
 
-#css-skill {
+#btn-css-skill {
   grid-area: 1 / 2 / 2 / 4;
   align-self: center;
   justify-self: center;
 }
 
-#js-skill {
+#btn-js-skill {
   grid-area: 2 / 2 / 3 / 3;
 }
 
-#react-skill {
+#btn-react-skill {
   grid-area: 1 / 3 / 2 / 5;
   align-self: center;
   justify-self: center;
 }
 
-#git-skill {
+#btn-git-skill {
   grid-area: 2 / 3 / 3 / 4;
 }
 

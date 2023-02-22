@@ -23,11 +23,25 @@
 
 .footer-rss {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
-  img{
+  a{
+/*     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    width: fit-content;
     margin-bottom: 3vh;
-    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: colors.$primary-light;
+    font-family: typografy.$font-body-boldItalic;
+    img{
+      width: 100px;
+    }
+    p{
+      margin: 0;
+    }
   }
 }
 
