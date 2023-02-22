@@ -11,8 +11,8 @@
   color: $color;
   font-family: $font;
   position: absolute;
-  top: 0.2rem;
-  left: 1rem;
+  top: -2.2rem;
+/*   left: 1rem; */
 }
 
 @mixin header-h1-second(
@@ -35,12 +35,17 @@
     repeat: no-repeat;
     attachment: fixed;
   }
+  border-radius: 20px;
   height: 70vh;
+  width: 98vw;
+  margin: auto auto;
   padding: 5px;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  box-shadow:  -12px 12px 24px rgb(98, 98, 98),
+  12px -12px 24px rgb(255, 255, 255);
 }
 
 @mixin span-h2($color: colors.$secondary-light, $font: typografy.$font-html) {

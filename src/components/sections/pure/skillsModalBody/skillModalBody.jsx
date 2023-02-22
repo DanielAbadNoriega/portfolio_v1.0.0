@@ -6,8 +6,8 @@ const SkillModalBody = ({ content }) => {
   return (
     <div className="modal-body">
       <ul>
-        {Object.keys(content).map((key) => (
-          <li>
+        {Object.keys(content).map((key, index) => (
+          <li key={index}>
             <strong>{key}:</strong> {content[key]}
           </li>
         ))}

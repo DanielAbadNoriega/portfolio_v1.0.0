@@ -12,7 +12,7 @@ const SkillModal = ({ name, content }) => {
       aria-hidden="true"
     >
       <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-        <div className="modal-content">
+        <div className="modal-content modal-container">
           {/* HEADER */}
           <div className="modal-header">
             <h1 className="modal-title fs-5" id={`${name}-skill-modalLabel`}>
@@ -27,18 +27,15 @@ const SkillModal = ({ name, content }) => {
           </div>
           {/* BODDY */}
           {/* <div className="modal-body">...</div> */}
-          <SkillModalBody content={content}></SkillModalBody>
+          <SkillModalBody key={name} content={content}></SkillModalBody>
           {/* FOOTER */}
           <div className="modal-footer">
             <button
               type="button"
-              className="btn btn-secondary"
+              className="btn btn-danger"
               data-bs-dismiss="modal"
             >
               Close
-            </button>
-            <button type="button" className="btn btn-primary">
-              Save changes
             </button>
           </div>
         </div>

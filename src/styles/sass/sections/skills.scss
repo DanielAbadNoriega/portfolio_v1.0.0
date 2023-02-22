@@ -3,9 +3,6 @@
 @use "../variables/v-breakpoints.scss" as media;
 @use "../mixins/sections.scss" as _mixins;
 
-#skills-section {
-  margin-top: 20vh;
-}
 /* url("../../../assets/imgs/sections/skills/stones.jpg") */
 .skills-container {
   @include _mixins.section(url("../../../assets/imgs/backgrounds/slashes.jpg"));
@@ -33,6 +30,10 @@
       }
     }
   }
+}
+
+#skills-section {
+  margin-top: 20vh;
 }
 
 .skills {
@@ -139,6 +140,9 @@
         font-size: typografy.$text-base-lg;
       }
     }
+  }
+  .skills{
+    margin-left: 15%;
   }
 }
 
