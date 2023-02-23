@@ -1,5 +1,5 @@
 import React from "react";
-import { SKILLS } from "../../../../data/data";
+import { SKILLS, SKILLS_BACK, SKILLS_FRONT } from "../../../../data/data";
 import SkillButton from "../../pure/skillsButton/skillButton";
 import SkillModal from "../../pure/skillsModal/skillModal";
 
@@ -14,9 +14,34 @@ const SkillsContainer = () => {
         <span>&lt;/h2&gt;</span>
         <p>
           <br />
-          Here my skills until now.
+          Look down my skills that i have until now and please{" "}
+          <span>press each icon image</span> to see the full content about each
+          one.
           <br />
         </p>
+        <div className="skills-list">
+        <div className="skills-list-front">
+          <span>&lt;h2&gt;</span>
+          <h2>Front skills</h2>
+          <span>&lt;/h2&gt;</span>
+          <ul>
+            {SKILLS_FRONT.map((skill) => (
+              <li>{skill}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="skills-list-back">
+
+          <span>&lt;h2&gt;</span>
+          <h2>Backend skills</h2>
+          <span>&lt;/h2&gt;</span>
+          <ul>
+            {SKILLS_BACK.map((skill) => (
+              <li>{skill}</li>
+            ))}
+          </ul>
+        </div>
+        </div>
       </article>
       <div className="skills">
         {skills.map((skill, index) => {

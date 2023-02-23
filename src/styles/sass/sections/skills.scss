@@ -3,9 +3,9 @@
 @use "../variables/v-breakpoints.scss" as media;
 @use "../mixins/sections.scss" as _mixins;
 
-/* url("../../../assets/imgs/sections/skills/stones.jpg") */
 .skills-container {
   @include _mixins.section(url("../../../assets/imgs/backgrounds/slashes.jpg"));
+  min-height: 40vh;
   flex-direction: column;
   article {
     color: colors.$primary-light;
@@ -20,15 +20,38 @@
     }
     p {
       @include _mixins.section-p();
-
+      margin-bottom: 2vh;
       &:first-of-type::before {
         @include _mixins.section-p-first();
       }
 
-      &:last-child::after {
+      &::after {
         @include _mixins.section-p-second();
       }
+      span {
+        font-family: typografy.$font-body-boldItalic;
+        color: colors.$primary;
+      }
     }
+  }
+}
+
+.skills-list{
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.skills-list-front, .skills-list-back{
+  h2 {
+    @include _mixins.section-title();
+  }
+  ul {
+    font-family: typografy.$font-body-boldItalic;
+    font-size: typografy.$text-base-xs;
+    color: colors.$primary-light;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
 }
 
@@ -108,8 +131,9 @@
 /* MEDIA QUERIES */
 
 @media screen and (min-width: media.$s-mobile-breakpoint) {
-  #skills-section{
-    p{
+  #skills-section {
+    p,
+    ul {
       font-size: typografy.$text-base-s;
     }
   }
@@ -117,21 +141,21 @@
 
 @media screen and (min-width: media.$mobile-breakpoint) {
   #skills-section {
-    height: 75vh;
-    p{
+    p,
+    ul {
       font-size: typografy.$text-base;
     }
   }
-  .btn-skill{
-    img{
+  .btn-skill {
+    img {
       width: auto;
     }
   }
 }
 
 @media screen and (min-width: media.$tablet-breakpoint) {
-  .btn-skill{
-    img{
+  .btn-skill {
+    img {
       width: auto;
     }
   }
@@ -139,7 +163,6 @@
 
 @media screen and (min-width: media.$large-laptop-breakpoint) {
   #skills-section {
-    height: 65vh;
     flex-direction: row;
     justify-content: space-between;
     article {
@@ -147,16 +170,17 @@
         margin-top: 0;
         font-size: typografy.$text-headline-lg;
       }
-      p {
+      p,
+      ul {
         font-size: typografy.$text-base-lg;
       }
     }
   }
-  .skills{
+  .skills {
     margin-left: 15%;
   }
-  .btn-skill{
-    img{
+  .btn-skill {
+    img {
       width: 110px;
     }
   }
@@ -165,7 +189,11 @@
 @media screen and (min-width: media.$xl-laptop-breakpoint) {
   #work-section {
     article {
-      p {
+      h2 {
+        margin-top: 0;
+        font-size: typografy.$text-headline-xl;
+      }
+      p, ul {
         font-size: typografy.$text-base-xl;
       }
     }

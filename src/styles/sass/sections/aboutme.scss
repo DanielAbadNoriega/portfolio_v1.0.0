@@ -9,7 +9,7 @@
 
 .aboutme-container {
   @include _mixins.section(
-    url("../../../assets/imgs/sections/aboutme/aboutme.png")
+    url("../../../assets/imgs/sections/aboutme/aboutme.jpg")
   );
   article {
     color: colors.$primary-light;
@@ -59,7 +59,6 @@
 
 @media screen and (min-width: media.$mobile-breakpoint) {
   #aboutme-section {
-    height: 75vh;
     img{
       width: 60%;
     }
@@ -76,7 +75,6 @@
 
 @media screen and (min-width: media.$large-laptop-breakpoint) {
   #aboutme-section {
-    height: 65vh;
     flex-direction: row;
     justify-content: space-between;
     article {
@@ -102,6 +100,10 @@
   #aboutme-section {
     gap: 8vw;
     article {
+      h2 {
+        margin-top: 0;
+        font-size: typografy.$text-headline-xl;
+      }
       p {
         font-size: typografy.$text-base-xl;
       }

@@ -20,36 +20,36 @@ export const SKILLS = [
     name: "css",
     img: css,
     content: {
-      Selectores:
-        "tipos, clases, ID, atributos, pseudo-clases y pseudo-elementos.",
+      Selectors:
+        "types, classes, ID, attributes, pseudo-classes, and pseudo-elements.",
       "Box model": "margin, padding, border, height, width.",
       Display: "block, inline, inline-block, flex, grid.",
-      Posicionamiento: "static, relative, absolute, fixed.",
-      "Unidades de medida": "px, em, rem, %, vh, vw.",
-      Tipografía:
+      Positioning: "static, relative, absolute, fixed.",
+      "Units of measurement": "px, em, rem, %, vh, vw.",
+      Typografy:
         "font-family, font-size, font-weight, ,line-height, text-align, text-decoration.",
-      Colores: "color, background-color, opacity.",
-      Animaciones: "transition, transform, keyframes.",
+      Colors: "color, background-color, opacity.",
+      Animations: "transition, transform, keyframes.",
     },
   },
   {
     name: "js",
     img: js,
     content: {
-      APIs: "APIs del navegador (fetch, websockets, geolocalización, etc.), integración con APIs externas, Programación asíncrona avanzada, gestión de paquetes y módulos.",
-      Frameworks: "Frameworks de frontend como ReactJS.",
+      APIs: "Browser APIs (fetch, websockets, geolocation, etc.), Integration with external APIs, Advanced asynchronous programming, Package and module management.",
+      Frameworks: "Frontend Frameworks like ReactJS.",
     },
   },
   {
     name: "react",
     img: react,
     content: {
-      Componentes:
-        "Props, State, Ciclo de vida de los componentes, Manejo de eventos, comunicación entre componentes, enrutamiento con React Router, Contexto.",
-      Formularios: "Validaciones con Formik y YUP.",
+      Components:
+        "Props, State, Component lifecycle, Event handling, Component communication, Routing with React Router, Context.",
+      Forms: "Validations width Formik y YUP.",
       Hooks:
-        "Hook de efecto (useEffect), Hook de estado (useState), Hook de referencia (useRef), Hook de contexto (useContext).",
-      Redux: "React Redux (gestión del estado), Redux SAGA.",
+        "Effect hook (useEffect), State hook (useState), Reference hook (useRef), Context hook (useContext).",
+      Redux: "React Redux (state management), Redux SAGA.",
     },
   },
   {
@@ -57,9 +57,13 @@ export const SKILLS = [
     img: git,
     content: {
       Basic:
-        "Configuración inicial de Git, clonar un repositorio, comandos de control de versiones (add, commit, push, pull, fetch).",
-        "Trabajar con ramas": "branch, checkout, merge, rebase.",
-        "Trabajo a través de la línea de comando y con herramientas gráficas": " GitKraken o GitHub Desktop."
+        "Initial Git setup, cloning a repository, version control commands (add, commit, push, pull, fetch).",
+      "Work with branchs": "branch, checkout, merge, rebase.",
+      "Work through the command line and with graphical tools":
+        " GitKraken or GitHub Desktop.",
     },
   },
 ];
+
+export const SKILLS_FRONT = ["HTML", "CSS", "SASS", "Bootstrap", "Javascript", "ReactJS", "Typescript", "GIT"];
+export const SKILLS_BACK = ["NodeJS", "MongoDB"]

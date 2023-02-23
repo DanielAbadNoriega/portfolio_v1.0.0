@@ -10,6 +10,7 @@
   background: {
     image: url("../../../assets/imgs/sections/footer/bg_pc_footer.jpg");
     repeat: no-repeat;
+    size: cover;
   }
   h3 {
     @include _mixins.section-title(
