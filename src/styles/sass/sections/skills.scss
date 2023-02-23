@@ -36,16 +36,15 @@
   }
 }
 
-.skills-list{
+.skills-list {
+  margin-left: 1%;
   display: flex;
   align-items: flex-start;
-
+  gap: 2rem;
 }
 
-.skills-list-front, .skills-list-back{
-  h2 {
-    @include _mixins.section-title();
-  }
+.skills-list-front,
+.skills-list-back {
   ul {
     font-family: typografy.$font-body-boldItalic;
     font-size: typografy.$text-base-xs;
@@ -53,6 +52,10 @@
     margin-top: 2vh;
     margin-bottom: 2vh;
   }
+}
+
+.skills-list-back {
+  margin: 0 auto auto auto;
 }
 
 #skills-section {
@@ -103,49 +106,34 @@
 }
 
 #html-skill:hover {
-  background-image: url("../../../assets/imgs/iconos_languages/html_hover.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include _mixins.btn-hover(
+    url("../../../assets/imgs/iconos_languages/html_hover.png")
+  );
 }
 #css-skill:hover {
-  background-image: url("../../../assets/imgs/iconos_languages/css_hover.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include _mixins.btn-hover(
+    url("../../../assets/imgs/iconos_languages/css_hover.png")
+  );
 }
 #js-skill:hover {
-  background-image: url("../../../assets/imgs/iconos_languages/js_hover.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include _mixins.btn-hover(
+    url("../../../assets/imgs/iconos_languages/js_hover.png")
+  );
 }
 #react-skill:hover {
-  background-image: url("../../../assets/imgs/iconos_languages/react_hover.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include _mixins.btn-hover(
+    url("../../../assets/imgs/iconos_languages/react_hover.png")
+  );
 }
 #git-skill:hover {
-  background-image: url("../../../assets/imgs/iconos_languages/git_hover.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include _mixins.btn-hover(
+    url("../../../assets/imgs/iconos_languages/git_hover.png")
+  );
 }
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: media.$s-mobile-breakpoint) {
-  #skills-section {
-    p,
-    ul {
-      font-size: typografy.$text-base-s;
-    }
-  }
-}
-
 @media screen and (min-width: media.$mobile-breakpoint) {
-  #skills-section {
-    p,
-    ul {
-      font-size: typografy.$text-base;
-    }
-  }
   .btn-skill {
     img {
       width: auto;
@@ -166,14 +154,7 @@
     flex-direction: row;
     justify-content: space-between;
     article {
-      h2 {
-        margin-top: 0;
-        font-size: typografy.$text-headline-lg;
-      }
-      p,
-      ul {
-        font-size: typografy.$text-base-lg;
-      }
+      width: 50%;
     }
   }
   .skills {
@@ -182,20 +163,6 @@
   .btn-skill {
     img {
       width: 110px;
-    }
-  }
-}
-
-@media screen and (min-width: media.$xl-laptop-breakpoint) {
-  #work-section {
-    article {
-      h2 {
-        margin-top: 0;
-        font-size: typografy.$text-headline-xl;
-      }
-      p, ul {
-        font-size: typografy.$text-base-xl;
-      }
     }
   }
 }

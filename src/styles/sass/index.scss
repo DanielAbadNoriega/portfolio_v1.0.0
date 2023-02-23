@@ -1,5 +1,7 @@
 /* BASE */
 @use "./base/reset";
+@use "./base/animations.scss";
+@use "./base/typografy.scss";
 
 /* LAYOUT */
 @use "layout/body";
@@ -12,4 +14,4 @@
 @use "sections/work";
 
 /* COMPONENTS */
-@use "components/modal.scss"
+@use "components/modal.scss";

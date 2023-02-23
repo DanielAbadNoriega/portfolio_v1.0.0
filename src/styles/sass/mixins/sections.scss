@@ -39,8 +39,8 @@
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  box-shadow:  -12px 12px 24px rgb(98, 98, 98),
-  12px -12px 24px rgb(255, 255, 255);
+  box-shadow: -12px 12px 24px rgb(98, 98, 98),
+    12px -12px 24px rgb(255, 255, 255);
 }
 
 @mixin span-h2($color: colors.$secondary-light, $font: typografy.$font-html) {
@@ -66,7 +66,6 @@
   font-family: $font;
   font-size: $fontSize;
   color: colors.$primary;
-  opacity: 0.5;
   margin-top: 1%;
   margin-bottom: 1%;
   margin-left: 2%;
@@ -103,6 +102,12 @@
   left: 2%;
 }
 
+@mixin btn-hover($url){
+  background-image: $url;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 @mixin glassmorphism() {
   width: 300px;
   min-height: 400px;
@@ -118,4 +123,13 @@
   color: colors.$primary-light;
   font-family: typografy.$font-body-bold;
   font-size: typografy.$text-note;
+}
+
+@mixin animation($name, $duration: 1s){
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: $name;
+  animation-name: $name;
 }

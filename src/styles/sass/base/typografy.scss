@@ -1,0 +1,74 @@
+@use "../variables/v-typografy.scss" as typografy;
+@use "../variables/v-breakpoints.scss" as media;
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: media.$s-mobile-breakpoint) {
+  #aboutme-section,
+  #skills-section {
+    p,
+    ul {
+      font-size: typografy.$text-base-s;
+    }
+  }
+}
+
+@media screen and (min-width: media.$mobile-breakpoint) {
+  #aboutme-section,
+  #skills-section {
+    p,
+    ul {
+      font-size: typografy.$text-base;
+    }
+  }
+  #footer {
+    p {
+      font-size: typografy.$text-base-s;
+    }
+  }
+}
+
+/* @media screen and (min-width: media.$laptop-breakpoint) {
+
+} */
+
+@media screen and (min-width: media.$large-laptop-breakpoint) {
+  #aboutme-section,
+  #skills-section {
+    h2 {
+      font-size: typografy.$text-headline-lg;
+    }
+    p {
+      font-size: typografy.$text-base-lg;
+    }
+  }
+  #footer {
+    h3 {
+      font-size: typografy.$text-display-lg;
+    }
+    p {
+      font-size: typografy.$text-base-lg;
+    }
+  }
+}
+
+@media screen and (min-width: media.$xl-laptop-breakpoint) {
+  #aboutme-section,
+  #skills-section {
+    h2 {
+      font-size: typografy.$text-headline-xl;
+    }
+    p,
+    ul {
+      font-size: typografy.$text-base-xl;
+    }
+  }
+  #footer {
+    h3 {
+      font-size: typografy.$text-display-xl;
+    }
+    p {
+      font-size: typografy.$text-base-xl;
+    }
+  }
+}

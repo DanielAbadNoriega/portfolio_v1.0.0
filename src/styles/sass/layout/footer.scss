@@ -33,9 +33,6 @@
     margin-bottom: 3vh;
     text-align: center;
     text-decoration: none;
-    img {
-      width: 70%;
-    }
     p {
       color: colors.$primary-light;
       font-family: typografy.$font-body-boldItalic;
@@ -51,29 +48,9 @@
 @media screen and (min-width: media.$mobile-breakpoint) {
   .footer-rss {
     a {
-      font-size: typografy.$text-base;
       img {
         width: 100px;
       }
-      p{
-        font-size: typografy.$text-base-s;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: media.$large-laptop-breakpoint) {
-  #footer {
-    h3 {
-      font-size: typografy.$text-display-lg;
-    }
-  }
-}
-
-@media screen and (min-width: media.$xl-laptop-breakpoint) {
-  #footer {
-    h3 {
-      font-size: typografy.$text-display-xl;
     }
   }
 }

@@ -40,9 +40,6 @@
 
 @media screen and (min-width: media.$s-mobile-breakpoint) {
   #aboutme-section {
-    p{
-      font-size: typografy.$text-base-s;
-    }
     img {
       width: 400px;
     }
@@ -51,24 +48,8 @@
 
 @media screen and (min-width: media.$mobile-breakpoint) {
   #aboutme-section {
-    p{
-      font-size: typografy.$text-base;
-    }
-  }
-}
-
-@media screen and (min-width: media.$mobile-breakpoint) {
-  #aboutme-section {
-    img{
-      width: 60%;
-    }
-  }
-}
-
-@media screen and (min-width: media.$laptop-breakpoint) {
-  #aboutme-section {
     img {
-      width: 700px;
+      width: 60%;
     }
   }
 }
@@ -81,32 +62,11 @@
       padding-left: 5px;
       padding-right: 5px;
       align-self: flex-start;
-      width: 40%;
-      h2 {
-        margin-top: 0;
-        font-size: typografy.$text-headline-lg;
-      }
-      p {
-        font-size: typografy.$text-base-lg;
-      }
+      width: 50%;
     }
     img {
       margin: auto auto;
-    }
-  }
-}
-
-@media screen and (min-width: media.$xl-laptop-breakpoint) {
-  #aboutme-section {
-    gap: 8vw;
-    article {
-      h2 {
-        margin-top: 0;
-        font-size: typografy.$text-headline-xl;
-      }
-      p {
-        font-size: typografy.$text-base-xl;
-      }
+      width: 700px;
     }
   }
 }
