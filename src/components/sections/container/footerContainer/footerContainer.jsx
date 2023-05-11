@@ -4,6 +4,9 @@ import linkedin from "../../../../assets/imgs/iconos_rrss/icono_Linkedin.png";
 import gmail from "../../../../assets/imgs/iconos_rrss/icono_gmail.png";
 
 const FooterContainer = () => {
+
+  //TODO: include googlemaps
+
   return (
     <footer id="footer" className="footer-container">
       <h3>Contact me</h3>
