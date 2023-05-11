@@ -3,6 +3,9 @@
 @use "./base/animations.scss";
 @use "./base/typografy.scss";
 
+/* PAGES */
+@use "./pages/init.scss";
+
 /* LAYOUT */
 @use "layout/body";
 @use "layout/header";

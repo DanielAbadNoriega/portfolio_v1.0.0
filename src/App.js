@@ -1,14 +1,20 @@
-import FooterContainer from "./components/sections/container/footerContainer/footerContainer";
-import HeaderContainer from "./components/sections/container/headerContainer/headerContainer";
-import SectionsContainer from "./components/sections/container/sectionsContainer";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+
+} from "react-router-dom";
+import Home from "./components/sections/container/homeContainer/homeContainer"
+import InitContainer from "./components/sections/container/initContainer/initContainer"
 
 function App() {
   return (
-    <div className="App">
-      <HeaderContainer></HeaderContainer>
-      <SectionsContainer></SectionsContainer>
-      <FooterContainer></FooterContainer>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<InitContainer></InitContainer>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
+      </Routes>
+    </Router>
   );
 }
 

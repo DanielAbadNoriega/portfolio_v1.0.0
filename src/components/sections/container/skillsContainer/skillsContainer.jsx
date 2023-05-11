@@ -6,6 +6,10 @@ import SkillModal from "../../pure/skillsModal/skillModal";
 const SkillsContainer = () => {
   const skills = SKILLS;
 
+  const randomKey = () => {
+    return Math.floor(Math.random()* 999999);
+  }
+
   return (
     <section id="skills-section" className="skills-container">
       <article>
@@ -26,7 +30,7 @@ const SkillsContainer = () => {
           <span>&lt;/h2&gt;</span>
           <ul>
             {SKILLS_FRONT.map((skill) => (
-              <li>{skill}</li>
+              <li key={randomKey()}>{skill}</li>
             ))}
           </ul>
         </div>
@@ -37,7 +41,7 @@ const SkillsContainer = () => {
           <span>&lt;/h2&gt;</span>
           <ul>
             {SKILLS_BACK.map((skill) => (
-              <li>{skill}</li>
+              <li key={randomKey()}>{skill}</li>
             ))}
           </ul>
         </div>
