@@ -33,7 +33,6 @@
 } */
 
 @media screen and (min-width: media.$large-laptop-breakpoint) {
-  #aboutme-section,
   #skills-section {
     h2 {
       font-size: typografy.$text-headline-lg;
@@ -53,7 +52,6 @@
 }
 
 @media screen and (min-width: media.$xl-laptop-breakpoint) {
-  #aboutme-section,
   #skills-section {
     h2 {
       font-size: typografy.$text-headline-xl;

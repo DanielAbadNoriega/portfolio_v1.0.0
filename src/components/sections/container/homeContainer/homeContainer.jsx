@@ -6,9 +6,8 @@ import FooterContainer from '../footerContainer/footerContainer';
 const Home = () => {
   return (
     <>
-      <HeaderContainer></HeaderContainer>
       <SectionsContainer></SectionsContainer>
-      <FooterContainer></FooterContainer>
+      {/* <FooterContainer></FooterContainer> */}
     </>
   );
 }

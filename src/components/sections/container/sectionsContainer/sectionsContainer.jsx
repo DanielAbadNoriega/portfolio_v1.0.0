@@ -7,7 +7,7 @@ const SectionsContainer = () => {
   return (
     <div>
       <AboutmeContainer></AboutmeContainer>
-      <SkillsContainer></SkillsContainer>
+      {/* <SkillsContainer></SkillsContainer> */}
 {/*       <WorkContainer></WorkContainer> */}
     </div>
   );

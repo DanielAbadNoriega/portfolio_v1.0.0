@@ -1,8 +1,56 @@
 @use "../variables/v-colors.scss" as colors;
 @use "../variables/v-typografy.scss" as typografy;
+@use "../variables/v-breakpoints.scss" as media;
+@use "../mixins/sections.scss" as _mixins;
 
 .initContainer {
   height: 100vh;
   width: 100%;
-  background-color: colors.$secondary-10;
+  background: colors.$secondary-10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#init-section {
+  flex-grow: 1;
+  padding: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in;
+
+  h1 {
+    margin-left: 5vw;
+    flex-grow: 1;
+    color: colors.$primary-1;
+    font-size: 7vw;
+    font-family: typografy.$font-title;
+    filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
+    span {
+      color: colors.$primary;
+      filter: none;
+      &:hover {
+        border-radius: 16px;
+        backdrop-filter: blur(4.4px);
+        -webkit-backdrop-filter: blur(4.4px);
+        background: rgba(58, 58, 58, 0.2);
+        box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.2),
+          inset -2px -2px 20px (#545454);
+      }
+    }
+
+    &:first-of-type:before {
+      @include _mixins.header-h1-first();
+    }
+
+    &:nth-of-type(1):after {
+      @include _mixins.header-h1-second();
+    }
+  }
+  img {
+    margin-right: 2%;
+    width: 50%;
+    filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
+  }
 }
