@@ -24,23 +24,15 @@
   left: 2%;
 }
 
-@mixin section($url) {
+@mixin section($url, $color: colors.$primary-light) {
+  color: $color;
+  border-radius: 20px;
+  box-shadow: -4px 4px 8px rgb(98, 98, 98), 4px -4px 8px rgb(98, 98, 98);
   background: $url center;
   background: {
     size: cover;
     repeat: no-repeat;
-    attachment: fixed;
   }
-  border-radius: 20px;
-  width: 98vw;
-  margin: auto auto;
-  padding: 5px;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
-  box-shadow: -12px 12px 24px rgb(98, 98, 98),
-    12px -12px 24px rgb(255, 255, 255);
 }
 
 @mixin span-h2($color: colors.$secondary-light, $font: typografy.$font-html) {
@@ -63,22 +55,22 @@
   $font: typografy.$font-title,
   $fontSize: typografy.$text-headline
 ) {
-  font-family: $font;
-  font-size: $fontSize;
-  color: colors.$primary;
+  width: 100%;
   margin-top: 1%;
   margin-bottom: 1%;
-  margin-left: 2%;
+  margin-left: 8%;
+  font-family: $font;
+  font-size: clamp(60px, 6vw, 94px);
+  color: colors.$primary;
 }
 
 @mixin section-p(
-  $font: typografy.$font-body-boldItalic,
-  $fontSize: typografy.$text-base-xs
+  $font: typografy.$font-body-boldItalic
 ) {
   margin: 0;
   margin-left: 1%;
   font-family: $font;
-  font-size: $fontSize;
+  font-size: clamp(12px, 3vw, 22px);
 }
 
 @mixin section-p-first(
@@ -102,7 +94,7 @@
   left: 2%;
 }
 
-@mixin btn-hover($url){
+@mixin btn-hover($url) {
   background-image: $url;
   background-size: contain;
   background-repeat: no-repeat;
@@ -125,7 +117,7 @@
   font-size: typografy.$text-note;
 }
 
-@mixin animation($name, $duration: 1s){
+@mixin animation($name, $duration: 1s) {
   -webkit-animation-duration: $duration;
   animation-duration: $duration;
   -webkit-animation-fill-mode: both;

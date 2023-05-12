@@ -4,7 +4,8 @@
 @use "../mixins/sections.scss" as _mixins;
 
 .footer-container {
-  margin-top: 4rem;
+  // margin-top: 4rem;
+  margin-top: 20vh;
   border-radius: 20px 20px 0 0;
   box-shadow: -7px -7px 14px #5a5a5a, 7px 7px 14px #ffffff;
   background: {
@@ -17,6 +18,7 @@
       typografy.$font-html,
       typografy.$text-headline
     );
+    
     margin-top: -1%;
     margin-left: 2%;
     color: colors.$secondary-light;

@@ -45,7 +45,7 @@ export const SKILLS = [
     img: react,
     content: {
       Components:
-        "Props, State, Component lifecycle, Event handling, Component communication, Routing with React Router, Context.",
+        "Props, State, Component lifecycle, Event handling, Component communication, Routing with React Router, useContext, Redux.",
       Forms: "Validations width Formik y YUP.",
       Hooks:
         "Effect hook (useEffect), State hook (useState), Reference hook (useRef), Context hook (useContext).",
@@ -65,5 +65,5 @@ export const SKILLS = [
   },
 ];
 
-export const SKILLS_FRONT = ["HTML", "CSS", "SASS", "Bootstrap", "Javascript", "ReactJS", "Typescript", "GIT"];
-export const SKILLS_BACK = ["NodeJS", "MongoDB"]
+export const SKILLS_FRONT = ["HTML5", "CSS3", "SASS/SCSS", "Bootstrap", "Tailwind", "Javascript", "ReactJS", "Typescript", "GIT"];
+export const SKILLS_BACK = ["NodeJS", "MongoDB", "API REST", "Firebase"]

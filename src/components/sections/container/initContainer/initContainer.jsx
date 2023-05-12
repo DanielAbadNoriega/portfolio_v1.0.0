@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import HeaderContainer from "../headerContainer/headerContainer";
 
 import logo_250 from "../../../../assets/imgs/logo/Logo_250px.png";
 import logo_500 from "../../../../assets/imgs/logo/Logo_500px.png";
@@ -17,7 +16,13 @@ const InitContainer = () => {
           HI.
           <br /> I'M,
           <br />
-          <span role="button" onClick={() => navigate("/home")} style={{cursor: "pointer"}}>DANIEL</span>
+          <span
+            role="button"
+            onClick={() => navigate("/home")}
+            style={{ cursor: "pointer" }}
+          >
+            DANIEL
+          </span>
           <br />
         </h1>
 

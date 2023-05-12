@@ -17,9 +17,6 @@
   }
   h2 {
     @include _mixins.section-title();
-    width: 100%;
-    margin-left: 8%;
-    font-size: clamp(60px, 6vw, 94px);
   }
   .aboutme-container-body {
     display: flex;
@@ -30,21 +27,12 @@
       width: clamp(400px, 100%, 900px);
     }
     article {
+      @include _mixins.section(url("../../../assets/imgs/sections/aboutme/aboutme.jpg"));
+      height: 40vh;
       flex-grow: 1;
-      background: url("../../../assets/imgs/sections/aboutme/aboutme.jpg")
-        center;
-      background: {
-        size: cover;
-        repeat: no-repeat;
-        attachment: fixed;
-      }
-      color: colors.$primary-light;
-      border-radius: 20px;
-      box-shadow: -4px 4px 8px rgb(98, 98, 98), 4px -4px 8px rgb(98, 98, 98);
 
       p {
         @include _mixins.section-p();
-        font-size: clamp(12px, 3vw, 22px);
 
         &:first-of-type::before {
           @include _mixins.section-p-first();

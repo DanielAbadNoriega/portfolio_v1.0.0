@@ -3,65 +3,90 @@
 @use "../variables/v-breakpoints.scss" as media;
 @use "../mixins/sections.scss" as _mixins;
 
-.skills-container {
-  @include _mixins.section(url("../../../assets/imgs/backgrounds/slashes.jpg"));
-  min-height: 40vh;
+#skills-section {
+  margin-top: 20vh;
+  display: flex;
   flex-direction: column;
-  article {
-    color: colors.$primary-light;
-    padding-left: 5px;
-    padding-right: 5px;
-    align-self: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  .skill-section-title {
+    margin-top: 2vw;
+    margin-left: 2vw;
     span {
       @include _mixins.span-h2();
     }
     h2 {
       @include _mixins.section-title();
     }
-    p {
-      @include _mixins.section-p();
-      margin-bottom: 2vh;
-      &:first-of-type::before {
-        @include _mixins.section-p-first();
-      }
-
-      &::after {
-        @include _mixins.section-p-second();
-      }
+  }
+  .skills-container {
+    @include _mixins.section(
+      url("../../../assets/imgs/backgrounds/slashes.jpg")
+    );
+    min-height: 40vh;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: {
+      attachment: fixed;
+    }
+    article {
+      padding-left: 5px;
+      padding-right: 5px;
+      align-self: flex-start;
       span {
-        font-family: typografy.$font-body-boldItalic;
-        color: colors.$primary;
+        @include _mixins.span-h2();
+      }
+      h2 {
+        @include _mixins.section-title();
+      }
+      p {
+        @include _mixins.section-p();
+        margin-bottom: 2vh;
+
+        &:first-of-type::before {
+          @include _mixins.section-p-first();
+        }
+
+        &::after {
+          @include _mixins.section-p-second();
+        }
+        span {
+          font-family: typografy.$font-body-boldItalic;
+          color: colors.$primary;
+        }
       }
     }
   }
 }
 
+/* SKILLS LIST */
 .skills-list {
   margin-left: 1%;
   display: flex;
   align-items: flex-start;
   gap: 2rem;
-}
 
-.skills-list-front,
-.skills-list-back {
-  ul {
-    font-family: typografy.$font-body-boldItalic;
-    font-size: typografy.$text-base-xs;
-    color: colors.$primary-light;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+  .skills-list-front,
+  .skills-list-back {
+    ul {
+      font-family: typografy.$font-body-boldItalic;
+      font-size: typografy.$text-base-xs;
+      color: colors.$primary-light;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+    }
+  }
+  .skills-list-back {
+    margin: 0 auto auto auto;
   }
 }
 
-.skills-list-back {
-  margin: 0 auto auto auto;
-}
-
-#skills-section {
-  margin-top: 20vh;
-}
-
+/* SKILLS ICONS */
 .skills {
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
@@ -73,7 +98,8 @@
   border: none;
   img {
     cursor: pointer;
-    width: 80px;
+    // width: 80px;
+    width: clamp(80px, 100%, 110px);
   }
 }
 
@@ -133,36 +159,17 @@
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: media.$mobile-breakpoint) {
-  .btn-skill {
-    img {
-      width: auto;
-    }
-  }
-}
-
-@media screen and (min-width: media.$tablet-breakpoint) {
-  .btn-skill {
-    img {
-      width: auto;
-    }
-  }
-}
-
 @media screen and (min-width: media.$large-laptop-breakpoint) {
   #skills-section {
-    flex-direction: row;
-    justify-content: space-between;
-    article {
-      width: 50%;
+    .skills-container {
+      flex-direction: row;
+      justify-content: space-between;
+      article {
+        width: 50%;
+      }
     }
   }
   .skills {
     margin-left: 15%;
-  }
-  .btn-skill {
-    img {
-      width: 110px;
-    }
   }
 }
