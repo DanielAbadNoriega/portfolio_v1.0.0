@@ -10,35 +10,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-#init-section {
-  flex-grow: 1;
-  padding: 2vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  animation: fadeIn 1.5s ease-in;
-
-  h1 {
-    margin-left: 5vw;
+  .wraper {
+    height: 100%;
+    padding: 1.5rem;
     flex-grow: 1;
-    color: colors.$primary-1;
-    font-size: 7vw;
-    font-family: typografy.$font-title;
-    filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
-    span {
-      color: colors.$primary;
-      filter: none;
-      &:hover {
-        border-radius: 16px;
-        backdrop-filter: blur(4.4px);
-        -webkit-backdrop-filter: blur(4.4px);
-        background: rgba(58, 58, 58, 0.2);
-        box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.2),
-          inset -2px -2px 20px (#545454);
-      }
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2.2rem;
 
     &:first-of-type:before {
       @include _mixins.header-h1-first();
@@ -47,10 +28,78 @@
     &:nth-of-type(1):after {
       @include _mixins.header-h1-second();
     }
+    .box {
+      width: 100%;
+      height: 15vh;
+      margin: 20px;
+      border-radius: 15px;
+      cursor: pointer;
+
+      .single-box {
+        height: 100%;
+        width: 100%;
+        perspective: 1200px;
+
+        .box-content {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transform-style: preserve-3d;
+          transition: all 1s;
+
+          .sides {
+            position: absolute;
+            text-align: start;
+            color: colors.$primary-1;
+
+            h1 {
+              margin-left: 5vw;
+              flex-grow: 1;
+              font-size: 7vw;
+              font-family: typografy.$font-title;
+              filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
+            }
+          }
+
+          .side-1 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transform: rotateX(0deg) translateZ(calc(8vw / 2));
+            background-color: #000000;
+
+            span {
+              color: colors.$primary;
+            }
+          }
+
+          .side-2 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: colors.$primary-10;
+            background-color: #000000;
+            transform: rotateX(-90deg) translateZ(calc(8vw / 2));
+
+            span {
+              color: colors.$primary-1;
+            }
+          }
+        }
+      }
+    }
   }
+
   img {
     margin-right: 2%;
     width: 50%;
     filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
   }
+}
+
+.box:hover .box-content {
+  transform: translateZ(-150px) rotateX(90deg);
 }
