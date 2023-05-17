@@ -5,25 +5,14 @@ import logo_250 from "../../../../assets/imgs/logo/Logo_250px.png";
 import logo_500 from "../../../../assets/imgs/logo/Logo_500px.png";
 
 const InitContainer = () => {
-
   const navigate = useNavigate();
 
-  const [isMobile, setisMobile] = useState(false);
-
-  const tapAnyWhere = () => {
-    setisMobile(!isMobile);
-    setTimeout(() => {
-      setisMobile(!isMobile);
-    }, 10000);
-  };
-
   // TODO: tapAnyWhere
-  // TODO: fadeIn
 
   return (
-    <div className="initContainer" onClick={() => tapAnyWhere()}>
+    <div className="initContainer">
       {/* TITLE */}
-      <div className="wraper" onClick={() => tapAnyWhere()}>
+      <div className="wraper">
         {/* CONTACT */}
         <div className="box">
           <div className="single-box">
@@ -86,7 +75,6 @@ const InitContainer = () => {
           (max-width: 800px) 250px,
            400px"
         alt="Logo"
-        onClick={() => tapAnyWhere()}
       />
     </div>
   );

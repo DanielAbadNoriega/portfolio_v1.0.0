@@ -20,26 +20,50 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    @include _mixins.animation(slideInDown, 1.5s);
 
     &:first-of-type:before {
       @include _mixins.header-h1-first();
+      animation-delay: 0s;
     }
 
     &:nth-of-type(1):after {
       @include _mixins.header-h1-second();
+      animation-delay: 2s;
+    }
+
+    &:first-of-type:before,
+    &:nth-of-type(1):after {
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
     }
 
     .box {
       width: 100%;
-      // height: clamp(115px, 15vh, 170px);
-      height: 12vw;
-      min-height: 115px;
-      max-height: 170px;
+      height: clamp(115px, 12vw, 170px);
+      // height: 12vw;
+      // min-height: 115px;
+      // max-height: 170px;
       margin: 20px;
       border-radius: 15px;
       cursor: pointer;
-      
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+
+      &:nth-of-type(1) {
+        animation-delay: 0.5s;
+      }
+
+      &:nth-of-type(2) {
+        animation-delay: 1s;
+      }
+
+      &:nth-of-type(3) {
+        animation-delay: 1.5s;
+      }
 
       .single-box {
         height: 100%;
@@ -62,8 +86,7 @@
               margin-left: 1vw;
               flex-grow: 1;
               margin-bottom: 0;
-              // font-size: 7vw;
-              font-size: clamp(100px, 12vw, 170px);
+              font-size: clamp(70px, 12vw, 170px);
               font-family: typografy.$font-title;
               filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
             }
@@ -112,7 +135,7 @@
   }
 
   img {
-/*     position: absolute;
+    /*     position: absolute;
     top: 0.5vh;
     right: 1vw; */
     width: 200px;
@@ -141,5 +164,27 @@
       margin-right: 2%;
       width: clamp(200px, 40%, 900px);
     }
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
