@@ -34,7 +34,7 @@
     &:first-of-type:before,
     &:nth-of-type(1):after {
       opacity: 0;
-      animation: fadeIn 1s ease-in-out;
+      animation: fadeInY 1s ease-in-out;
       animation-fill-mode: forwards;
       -webkit-animation-fill-mode: forwards;
     }
@@ -49,7 +49,7 @@
       border-radius: 15px;
       cursor: pointer;
       opacity: 0;
-      animation: fadeIn 1s ease-in-out;
+      animation: fadeInY 1s ease-in-out;
       animation-fill-mode: forwards;
       -webkit-animation-fill-mode: forwards;
 
@@ -135,9 +135,6 @@
   }
 
   img {
-    /*     position: absolute;
-    top: 0.5vh;
-    right: 1vw; */
     width: 200px;
     margin-top: 5vh;
     filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
@@ -164,27 +161,5 @@
       margin-right: 2%;
       width: clamp(200px, 40%, 900px);
     }
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

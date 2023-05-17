@@ -5,15 +5,15 @@
 
 /* PAGES */
 @use "./pages/init.scss";
+@use "./pages/contact";
+@use "./pages/aboutme";
+@use "./pages/skills";
 
 /* LAYOUT */
 @use "layout/body";
 @use "layout/header";
-@use "layout/footer";
 
 /* SECTIONS */
-@use "sections/aboutme";
-@use "sections/skills";
 @use "sections/work";
 
 /* COMPONENTS */

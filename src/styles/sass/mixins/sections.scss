@@ -64,9 +64,7 @@
   color: colors.$primary;
 }
 
-@mixin section-p(
-  $font: typografy.$font-body-boldItalic
-) {
+@mixin section-p($font: typografy.$font-body-boldItalic) {
   margin: 0;
   margin-left: 1%;
   font-family: $font;
@@ -98,6 +96,29 @@
   background-image: $url;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@mixin btn-navigator() {
+  padding: .25rem .5rem;
+  position: absolute;
+  right: 3vw;
+  color: colors.$primary-1;
+  font-family: typografy.$font-body-bold;
+  font-size: typografy.$text-note;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 2px 2px 4px rgba(162, 162, 162, 0.3),
+    inset -2px -2px 4px rgba(190, 190, 190, 0.3);
+  transition: .5s;
+
+    &:hover{
+      background: rgba(202, 197, 197, 0.07);
+      color: colors.$primary-6;
+    }
 }
 
 @mixin glassmorphism() {

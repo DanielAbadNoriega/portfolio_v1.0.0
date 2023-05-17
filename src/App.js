@@ -15,6 +15,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<InitContainer></InitContainer>}></Route>
+        <Route path="/init" element={<InitContainer></InitContainer>}></Route>
         <Route path="/about" element={<AboutmeContainer></AboutmeContainer>}></Route>
         <Route path="/skills" element={<SkillsContainer></SkillsContainer>}></Route>
         <Route path="/contact" element={<FooterContainer></FooterContainer>}></Route>

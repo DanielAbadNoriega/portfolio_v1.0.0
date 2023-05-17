@@ -4,14 +4,30 @@
 @use "../mixins/sections.scss" as _mixins;
 
 #skills-section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2rem;
+
+  .btn-navigator {
+    @include _mixins.btn-navigator();
+    opacity: 0;
+    animation: fadeInY 1s ease-in-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+
   .skill-section-title {
-    margin-top: 2vw;
-    margin-left: 2vw;
+    opacity: 0;
+    animation: fadeInY 1s ease-in-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+
     span {
       @include _mixins.span-h2();
     }
@@ -19,34 +35,29 @@
       @include _mixins.section-title();
     }
   }
+
   .skills-container {
-    @include _mixins.section(
-      url("../../../assets/imgs/backgrounds/slashes.jpg")
-    );
     flex-grow: 1;
-/*     min-height: 40vh; */
+    /*     min-height: 40vh; */
     width: 100%;
-    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: {
-      attachment: fixed;
-    }
+
     article {
       padding-left: 5px;
       padding-right: 5px;
       align-self: flex-start;
-      span {
-        @include _mixins.span-h2();
-      }
-      h2 {
-        @include _mixins.section-title();
-      }
+      opacity: 0;
+      animation: fadeInY 1s ease-in-out;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+      animation-delay: 1s;
       p {
         @include _mixins.section-p();
         margin-bottom: 2vh;
+        color: colors.$primary-1;
 
         &:first-of-type::before {
           @include _mixins.section-p-first();
@@ -60,10 +71,17 @@
           color: colors.$primary;
         }
       }
+      span {
+        @include _mixins.span-h2();
+      }
+      h3 {
+        @include _mixins.section-title();
+        margin-left: 0;
+        font-size: clamp(40px, 6vw, 80px);
+      }
     }
   }
 }
-
 /* SKILLS LIST */
 .skills-list {
   margin-left: 1%;
@@ -88,9 +106,13 @@
 
 /* SKILLS ICONS */
 .skills {
+  @include _mixins.section(url("../../../assets/imgs/backgrounds/slashes.jpg"));
+  background: {
+    attachment: fixed;
+  }
+  flex-grow: 1;
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
-  margin: auto auto;
 }
 
 .btn-skill {
@@ -98,8 +120,8 @@
   border: none;
   img {
     cursor: pointer;
-    // width: 80px;
-    width: clamp(80px, 100%, 110px);
+    //width: 5vw;
+    width: clamp(80px, 8vw, 150px);
   }
 }
 
@@ -118,6 +140,7 @@
 .container-js-skill {
   grid-area: 2 / 2 / 3 / 3;
   align-self: center;
+  justify-self: center;
 }
 
 .container-react-skill {
@@ -129,6 +152,7 @@
 .container-git-skill {
   grid-area: 2 / 3 / 3 / 4;
   align-self: center;
+  justify-self: center;
 }
 
 #html-skill:hover {
@@ -164,12 +188,10 @@
     .skills-container {
       flex-direction: row;
       justify-content: space-between;
+      gap: 1rem;
       article {
         width: 50%;
       }
     }
-  }
-  .skills {
-    margin-left: 15%;
   }
 }

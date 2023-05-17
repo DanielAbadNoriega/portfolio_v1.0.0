@@ -2,9 +2,12 @@ import React from "react";
 import { SKILLS, SKILLS_BACK, SKILLS_FRONT } from "../../../../data/data";
 import SkillButton from "../../pure/skillsButton/skillButton";
 import SkillModal from "../../pure/skillsModal/skillModal";
+import { useNavigate } from "react-router-dom";
 
 const SkillsContainer = () => {
   const skills = SKILLS;
+
+  const navigate = useNavigate();
 
   const randomKey = () => {
     return Math.floor(Math.random() * 999999);
@@ -12,26 +15,23 @@ const SkillsContainer = () => {
 
   return (
     <section id="skills-section">
+      <button className="btn-navigator" onClick={() => navigate("/")}>
+        Init.
+      </button>
       <div className="skill-section-title">
         <span>&lt;h2&gt;</span>
         <h2>Skills</h2>
         <span>&lt;/h2&gt;</span>
       </div>
+
       <div className="skills-container">
-      {/* SKILLS LIST */}
+        {/* SKILLS LIST */}
         <article>
-          <p>
-            <br />
-            Look down my skills that i have until now and please{" "}
-            <span>press each icon image</span> to see the full content about
-            each one.
-            <br />
-          </p>
           <div className="skills-list">
             <div className="skills-list-front">
-              <span>&lt;h2&gt;</span>
-              <h2>Front skills</h2>
-              <span>&lt;/h2&gt;</span>
+              <span>&lt;h3&gt;</span>
+              <h3>Front skills</h3>
+              <span>&lt;/h3&gt;</span>
               <ul>
                 {SKILLS_FRONT.map((skill) => (
                   <li key={randomKey()}>{skill}</li>
@@ -39,9 +39,9 @@ const SkillsContainer = () => {
               </ul>
             </div>
             <div className="skills-list-back">
-              <span>&lt;h2&gt;</span>
-              <h2>Backend skills</h2>
-              <span>&lt;/h2&gt;</span>
+              <span>&lt;h3&gt;</span>
+              <h3>Backend skills</h3>
+              <span>&lt;/h3&gt;</span>
               <ul>
                 {SKILLS_BACK.map((skill) => (
                   <li key={randomKey()}>{skill}</li>
@@ -49,8 +49,17 @@ const SkillsContainer = () => {
               </ul>
             </div>
           </div>
+          <p>
+            <br />
+            Look down my skills that i have until now and please{" "}
+            <span>press each icon image</span> to see the full content about
+            each one.
+            <br />
+          </p>
         </article>
+
         {/* SKILLS ICONS */}
+
         <div className="skills">
           {skills.map((skill, index) => {
             return (
@@ -65,6 +74,7 @@ const SkillsContainer = () => {
             );
           })}
         </div>
+        
       </div>
     </section>
   );

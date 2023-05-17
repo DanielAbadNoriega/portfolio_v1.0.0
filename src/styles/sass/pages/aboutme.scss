@@ -1,0 +1,118 @@
+@use "../variables/v-typografy.scss" as typografy;
+@use "../variables/v-colors.scss" as colors;
+@use "../variables/v-breakpoints.scss" as media;
+@use "../mixins/sections.scss" as _mixins;
+
+#aboutme-section {
+  width: 100%;
+  margin: auto auto;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+
+  .btn-navigator{
+    @include _mixins.btn-navigator();
+    opacity: 0;
+      animation: fadeInY 1s ease-in-out;
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+  }
+
+  span {
+    @include _mixins.span-h2();
+  }
+  h2 {
+    @include _mixins.section-title();
+  }
+  .aboutme-container-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    img {
+      width: clamp(400px, 100%, 900px);
+    }
+    article {
+      @include _mixins.section(
+        url("../../../assets/imgs/sections/aboutme/aboutme.jpg")
+      );
+      flex-grow: 1;
+
+      p {
+        @include _mixins.section-p();
+
+        /* 1 */
+        &:nth-of-type(1)::before {
+          @include _mixins.section-p-first();
+        }
+
+        &:nth-of-type(1)::after {
+          @include _mixins.section-p-second();
+        }
+        /* 2 */
+        &:nth-of-type(2)::before {
+          @include _mixins.section-p-first();
+        }
+
+        &:nth-of-type(2)::after {
+          @include _mixins.section-p-second();
+        }
+        /* 3 */
+        &:nth-of-type(3)::before {
+          @include _mixins.section-p-first();
+        }
+
+        &:nth-of-type(3)::after {
+          @include _mixins.section-p-second();
+        }
+        /* 4 */
+        &:nth-of-type(4)::before {
+          @include _mixins.section-p-first();
+        }
+
+        &:nth-of-type(4)::after {
+          @include _mixins.section-p-second();
+        }
+        /* 5 */
+        &:nth-of-type(5)::before {
+          @include _mixins.section-p-first();
+        }
+
+        &:nth-of-type(5)::after {
+          @include _mixins.section-p-second();
+        }
+        /* 6 */
+        &:nth-of-type(6)::before {
+          @include _mixins.section-p-first();
+        }
+
+        &:nth-of-type(6)::after {
+          @include _mixins.section-p-second();
+        }
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: media.$large-laptop-breakpoint) {
+  #aboutme-section {
+    .aboutme-container-body {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      article {
+        padding-left: 5px;
+        padding-right: 5px;
+        p {
+          font-size: clamp(12px, 2vw, 22px);
+        }
+      }
+    }
+  }
+}
