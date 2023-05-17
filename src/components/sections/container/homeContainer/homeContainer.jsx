@@ -1,14 +1,14 @@
 import React from 'react';
-import FooterContainer from '../footerContainer/footerContainer';
 import AboutmeContainer from '../aboutmeContainer/aboutmeContainer';
 import SkillsContainer from '../skillsContainer/skillsContainer';
+import ContactContainer from '../contactContainer/contactContainer';
 
 const Home = () => {
   return (
     <>
       <AboutmeContainer></AboutmeContainer>
       <SkillsContainer></SkillsContainer>
-      <FooterContainer></FooterContainer>
+      <ContactContainer></ContactContainer>
     </>
   );
 }

@@ -4,11 +4,11 @@ import {
   Routes,
 
 } from "react-router-dom";
-import Home from "./components/sections/container/homeContainer/homeContainer"
 import InitContainer from "./components/sections/container/initContainer/initContainer"
 import AboutmeContainer from "./components/sections/container/aboutmeContainer/aboutmeContainer";
 import SkillsContainer from "./components/sections/container/skillsContainer/skillsContainer";
-import FooterContainer from "./components/sections/container/footerContainer/footerContainer";
+import ContactContainer from "./components/sections/container/contactContainer/contactContainer";
+
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/init" element={<InitContainer></InitContainer>}></Route>
         <Route path="/about" element={<AboutmeContainer></AboutmeContainer>}></Route>
         <Route path="/skills" element={<SkillsContainer></SkillsContainer>}></Route>
-        <Route path="/contact" element={<FooterContainer></FooterContainer>}></Route>
+        <Route path="/contact" element={<ContactContainer></ContactContainer>}></Route>
       </Routes>
     </Router>
   );

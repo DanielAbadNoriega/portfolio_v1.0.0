@@ -3,44 +3,82 @@
 @use "../variables/v-breakpoints.scss" as media;
 @use "../mixins/sections.scss" as _mixins;
 
-.footer-container {
-  // margin-top: 4rem;
-  margin-top: 20vh;
-  border-radius: 20px 20px 0 0;
-  box-shadow: -7px -7px 14px #5a5a5a, 7px 7px 14px #ffffff;
-  background: {
-    image: url("../../../assets/imgs/sections/footer/bg_pc_footer.jpg");
-    repeat: no-repeat;
-    size: cover;
+#footer {
+  min-height: 100vh;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+
+  .btn-navigator {
+    @include _mixins.btn-navigator();
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInY 1s ease-in-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
   }
+
   h3 {
     @include _mixins.section-title(
       typografy.$font-html,
       typografy.$text-headline
     );
-    
-    margin-top: -1%;
-    margin-left: 2%;
     color: colors.$secondary-light;
-    align-self: flex-start;
+    margin: 0;
+    margin-bottom: 4rem;
+    opacity: 0;
+    animation: fadeInY 1s ease-in-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
   }
-}
+  .footer-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    opacity: 0;
+    animation: fadeInY 1s ease-in-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 0.5s;
 
-.footer-rss {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  a {
-    width: fit-content;
-    margin-bottom: 3vh;
-    text-align: center;
-    text-decoration: none;
     p {
-      color: colors.$primary-light;
-      font-family: typografy.$font-body-boldItalic;
-      font-size: 4px;
-      margin: 0;
-      z-index: 1;
+      @include _mixins.section-p();
+      flex-grow: 1;
+      color: colors.$primary-1;
+
+      &:nth-of-type(1)::before {
+        @include _mixins.section-p-first();
+      }
+
+      &:nth-of-type(1)::after {
+        @include _mixins.section-p-second();
+      }
+      span {
+        color: colors.$primary;
+      }
+    }
+
+    .footer-rss {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      a {
+        width: fit-content;
+        margin-bottom: 3vh;
+        text-align: center;
+        text-decoration: none;
+        p {
+          color: colors.$primary-light;
+          font-family: typografy.$font-body-boldItalic;
+          font-size: 4px;
+          font-size: clamp(12px, 3vw, 22px);
+          margin: 0;
+          z-index: 1;
+        }
+      }
     }
   }
 }
