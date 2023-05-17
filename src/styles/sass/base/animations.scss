@@ -4,8 +4,11 @@
   @include _mixins.animation(slideInDown, 1.5s);
 }
 
-/* SLIDE DOWN */
-
+/**
+ * ----------------------------------------
+ * animation slideInDown
+ * ----------------------------------------
+ */
 @-webkit-keyframes slideInDown {
   from {
     -webkit-transform: translate3d(0, -50%, 0);
@@ -32,6 +35,11 @@
   }
 }
 
+/**
+ * ----------------------------------------
+ * animation fadeIn Y axis
+ * ----------------------------------------
+ */
 @-webkit-keyframes fadeInY {
   0% {
     opacity: 0;
@@ -51,5 +59,67 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation shake-vertical
+ * ----------------------------------------
+ */
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+  80% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
   }
 }

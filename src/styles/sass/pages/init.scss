@@ -139,6 +139,34 @@
     margin-top: 5vh;
     filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
   }
+
+  .tap-anywhere {
+    @include _mixins.section-p();
+    position: absolute;
+    bottom: 1vh;
+    color: colors.$primary-1;
+    font-family: typografy.$font-title;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // gap: 6px;
+    opacity: 0;
+    -webkit-animation: fadeInY 1s ease-in-out 1s both;
+    animation: fadeInY 1s ease-in-out 1s both;
+    .arrow {
+      -webkit-animation: shake-vertical 10s
+        cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s infinite both;
+      animation: shake-vertical 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s
+        infinite both;
+        font-size: 1.5rem;
+    }
+    p{
+      margin: 0;
+      span {
+        color: colors.$primary;
+      }
+    }
+  }
 }
 
 .box:hover .box-content {

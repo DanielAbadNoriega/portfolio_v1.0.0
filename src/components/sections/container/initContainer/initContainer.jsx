@@ -1,22 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { IoIosArrowUp } from "react-icons/io";
 
 import logo_250 from "../../../../assets/imgs/logo/Logo_250px.png";
 import logo_500 from "../../../../assets/imgs/logo/Logo_500px.png";
 
 const InitContainer = () => {
+  const [boxMove, setBoxMove] = useState(false);
+  const [isMoved, setIsMoved] = useState(false);
+  const [counter, setCounter] = useState(0);
+
+  useEffect(
+    () => {
+      const originPos = () => {
+        setCounter(1);
+        console.log("[ tapAnyWhere - TIMEOUT ] Entro.");
+        setTimeout(() => {
+          setIsMoved(false);
+          setCounter(0);
+          console.log("[ tapAnyWhere - TIMEOUT ] Box move: ", boxMove);
+        }, 10000);
+      };
+
+      console.log("[ tapAnyWhere - UseEffect ] box move: ", boxMove);
+      console.log("[ tapAnyWhere - UseEffect ] box moved: ", isMoved);
+      return () => {
+        if (isMoved && counter === 0) originPos();
+      };
+    },
+    [boxMove, isMoved, counter]
+  );
+
   const navigate = useNavigate();
 
   // TODO: tapAnyWhere
 
+  const tapAnyWhere = () => {
+    setBoxMove(!boxMove);
+    setIsMoved(true);
+  };
+
+  const boxMoveStyle = {
+    transform: "translateZ(-150px) rotateX(90deg)",
+  };
+
   return (
-    <div className="initContainer">
+    <div className="initContainer" onClick={() => tapAnyWhere()}>
       {/* TITLE */}
       <div className="wraper">
         {/* CONTACT */}
         <div className="box">
           <div className="single-box">
-            <div className="box-content">
+            <div
+              className="box-content"
+              style={boxMove && isMoved ? boxMoveStyle : {}}
+            >
               <div
                 className="sides side-1"
                 onClick={() => navigate("/contact")}
@@ -35,7 +73,10 @@ const InitContainer = () => {
         {/* ABOUT */}
         <div className="box">
           <div className="single-box">
-            <div className="box-content">
+            <div
+              className="box-content"
+              style={boxMove && isMoved ? boxMoveStyle : {}}
+            >
               <div className="sides side-1" onClick={() => navigate("/about")}>
                 <h1>I'M</h1>
               </div>
@@ -48,7 +89,10 @@ const InitContainer = () => {
         {/* SKILLS */}
         <div className="box">
           <div className="single-box">
-            <div className="box-content">
+            <div
+              className="box-content"
+              style={boxMove && isMoved ? boxMoveStyle : {}}
+            >
               <div className="sides side-1" onClick={() => navigate("/skills")}>
                 <h1>
                   <span>DANIEL</span>
@@ -76,6 +120,12 @@ const InitContainer = () => {
            400px"
         alt="Logo"
       />
+      <div className="tap-anywhere">
+        <IoIosArrowUp className="arrow" />
+        <p>
+          TAP <span>ANYWHERE</span> OR <span>MOUSEOVER</span>
+        </p>
+      </div>
     </div>
   );
 };
