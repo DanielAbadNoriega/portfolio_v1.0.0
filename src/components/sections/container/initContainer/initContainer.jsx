@@ -10,26 +10,23 @@ const InitContainer = () => {
   const [isMoved, setIsMoved] = useState(false);
   const [counter, setCounter] = useState(0);
 
-  useEffect(
-    () => {
-      const originPos = () => {
-        setCounter(1);
-        console.log("[ tapAnyWhere - TIMEOUT ] Entro.");
-        setTimeout(() => {
-          setIsMoved(false);
-          setCounter(0);
-          console.log("[ tapAnyWhere - TIMEOUT ] Box move: ", boxMove);
-        }, 10000);
-      };
+  useEffect(() => {
+    const originPos = () => {
+      setCounter(1);
+      console.log("[ tapAnyWhere - TIMEOUT ] Entro.");
+      setTimeout(() => {
+        setIsMoved(false);
+        setCounter(0);
+        console.log("[ tapAnyWhere - TIMEOUT ] Box move: ", boxMove);
+      }, 10000);
+    };
 
-      console.log("[ tapAnyWhere - UseEffect ] box move: ", boxMove);
-      console.log("[ tapAnyWhere - UseEffect ] box moved: ", isMoved);
-      return () => {
-        if (isMoved && counter === 0) originPos();
-      };
-    },
-    [boxMove, isMoved, counter]
-  );
+    console.log("[ tapAnyWhere - UseEffect ] box move: ", boxMove);
+    console.log("[ tapAnyWhere - UseEffect ] box moved: ", isMoved);
+    return () => {
+      if (isMoved && counter === 0) originPos();
+    };
+  }, [boxMove, isMoved, counter]);
 
   const navigate = useNavigate();
 
@@ -46,6 +43,20 @@ const InitContainer = () => {
 
   return (
     <div className="initContainer" onClick={() => tapAnyWhere()}>
+      {/* LOGO */}
+      <img
+        src={logo_250}
+        srcSet={`
+            ${logo_250} 250w,
+            ${logo_500} 500w
+          `}
+        sizes="(min-width: 1500px) 500px,
+          (min-width: 800px) 400px,
+          (max-width: 800px) 250px,
+           400px"
+        alt="Logo"
+      />
+
       {/* TITLE */}
       <div className="wraper">
         {/* CONTACT */}
@@ -107,19 +118,8 @@ const InitContainer = () => {
           </div>
         </div>
       </div>
-      {/* LOGO */}
-      <img
-        src={logo_250}
-        srcSet={`
-            ${logo_250} 250w,
-            ${logo_500} 500w
-          `}
-        sizes="(min-width: 1500px) 500px,
-          (min-width: 800px) 400px,
-          (max-width: 800px) 250px,
-           400px"
-        alt="Logo"
-      />
+
+      {/* INFO */}
       <div className="tap-anywhere">
         <IoIosArrowUp className="arrow" />
         <p>
