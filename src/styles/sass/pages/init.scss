@@ -1,7 +1,7 @@
-@use "../variables/v-colors.scss" as colors;
-@use "../variables/v-typografy.scss" as typografy;
-@use "../variables/v-breakpoints.scss" as media;
-@use "../mixins/sections.scss" as _mixins;
+@use '../variables/v-colors.scss' as colors;
+@use '../variables/v-typografy.scss' as typografy;
+@use '../variables/v-breakpoints.scss' as media;
+@use '../mixins/sections.scss' as _mixins;
 
 .initContainer {
   height: 100vh;
@@ -13,131 +13,137 @@
   align-items: center;
   justify-content: center;
 
-  .wraper {
-    width: 100%;
-    padding-left: 1rem;
-    flex-grow: 1;
+  .initContainer-main {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-
-    &:first-of-type:before {
-      @include _mixins.header-h1-first();
-      animation-delay: 0s;
-    }
-
-    &:nth-of-type(1):after {
-      @include _mixins.header-h1-second();
-      animation-delay: 2s;
-    }
-
-    &:first-of-type:before,
-    &:nth-of-type(1):after {
-      opacity: 0;
-      animation: fadeInY 1s ease-in-out;
-      animation-fill-mode: forwards;
-      -webkit-animation-fill-mode: forwards;
-    }
-
-    .box {
+    .wraper {
       width: 100%;
-      height: clamp(115px, 12vw, 170px);
-      // height: 12vw;
-      // min-height: 115px;
-      // max-height: 170px;
-      margin: 20px;
-      border-radius: 15px;
-      cursor: pointer;
-      opacity: 0;
-      animation: fadeInY 1s ease-in-out;
-      animation-fill-mode: forwards;
-      -webkit-animation-fill-mode: forwards;
+      padding-left: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
 
-      &:nth-of-type(1) {
-        animation-delay: 0.5s;
+      &:first-of-type:before {
+        @include _mixins.header-h1-first();
+        animation-delay: 0s;
       }
 
-      &:nth-of-type(2) {
-        animation-delay: 1s;
+      &:nth-of-type(1):after {
+        @include _mixins.header-h1-second();
+        animation-delay: 2s;
       }
 
-      &:nth-of-type(3) {
-        animation-delay: 1.5s;
+      &:first-of-type:before,
+      &:nth-of-type(1):after {
+        opacity: 0;
+        animation: fadeInY 1s ease-in-out;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
       }
 
-      .single-box {
-        height: 100%;
+      .box {
         width: 100%;
-        perspective: 1200px;
+        height: clamp(115px, 12vw, 170px);
+        // height: 12vw;
+        // min-height: 115px;
+        // max-height: 170px;
+        margin: 20px;
+        border-radius: 15px;
+        cursor: pointer;
+        opacity: 0;
+        animation: fadeInY 1s ease-in-out;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
 
-        .box-content {
-          width: 100%;
+        &:nth-of-type(1) {
+          animation-delay: 0.5s;
+        }
+
+        &:nth-of-type(2) {
+          animation-delay: 1s;
+        }
+
+        &:nth-of-type(3) {
+          animation-delay: 1.5s;
+        }
+
+        .single-box {
           height: 100%;
-          position: relative;
-          transform-style: preserve-3d;
-          transition: all 1s;
+          width: 100%;
+          perspective: 1200px;
 
-          .sides {
-            position: absolute;
-            text-align: start;
-            color: colors.$primary-1;
-
-            h1 {
-              margin-left: 1vw;
-              flex-grow: 1;
-              margin-bottom: 0;
-              font-size: clamp(70px, 12vw, 170px);
-              font-family: typografy.$font-title;
-              filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
-            }
-          }
-
-          .side-1 {
-            height: 100%;
-            max-height: 170px;
+          .box-content {
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-            background-color: #000000;
-            transform: rotateX(0deg)
-              translateZ(clamp((115px / 2), (12vw / 2), (170px / 2)));
-
-            span {
-              height: 100%;
-              display: block;
-              color: colors.$primary;
-            }
-          }
-
-          .side-2 {
             height: 100%;
-            max-height: 170px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: colors.$primary-10;
-            background-color: #000000;
-            transform: rotateX(-90deg)
-              translateZ(clamp((115px / 2), (12vw / 2), (170px / 2)));
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 1s;
 
-            span {
-              height: 100%;
-              display: block;
+            .sides {
+              position: absolute;
+              text-align: start;
               color: colors.$primary-1;
+
+              h1 {
+                margin-left: 1vw;
+                flex-grow: 1;
+                margin-bottom: 0;
+                font-size: clamp(70px, 12vw, 170px);
+                font-family: typografy.$font-title;
+                filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
+              }
+            }
+
+            .side-1 {
+              height: 100%;
+              max-height: 170px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 2;
+              background-color: #000000;
+              transform: rotateX(0deg)
+                translateZ(clamp((115px / 2), (12vw / 2), (170px / 2)));
+
+              span {
+                height: 100%;
+                display: block;
+                color: colors.$primary;
+              }
+            }
+
+            .side-2 {
+              height: 100%;
+              max-height: 170px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: colors.$primary-10;
+              background-color: #000000;
+              transform: rotateX(-90deg)
+                translateZ(clamp((115px / 2), (12vw / 2), (170px / 2)));
+
+              span {
+                height: 100%;
+                display: block;
+                color: colors.$primary-1;
+              }
             }
           }
         }
       }
     }
-  }
 
-  img {
-    width: clamp(100px, 30%, 200px);
-    filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
+    img {
+      width: clamp(100px, 30%, 200px);
+      filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.2));
+    }
   }
 
   .tap-anywhere {
@@ -156,9 +162,9 @@
         cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s infinite both;
       animation: shake-vertical 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s
         infinite both;
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
-    p{
+    p {
       margin: 0;
       span {
         color: colors.$primary;
@@ -173,19 +179,20 @@
 
 @media screen and (min-width: media.$laptop-breakpoint) {
   .initContainer {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 
-    .wraper {
-      width: 70vw;
-      height: 100%;
-    }
-
-    img {
-      position: inherit;
-      margin-right: 2%;
-      width: clamp(200px, 40%, 900px);
+    .initContainer-main{
+      flex-direction: row;
+      justify-content: space-around;
+      .wraper {
+        width: 70vw;
+        height: 100%;
+      }
+  
+      img {
+        margin-right: 2%;
+        margin-left: 2%;
+        width: clamp(200px, 40%, 900px);
+      }
     }
   }
 }
