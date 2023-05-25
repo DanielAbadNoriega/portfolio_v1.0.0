@@ -1,22 +1,25 @@
-import React from "react";
-import perfilDan from "../../../../assets/imgs/sections/aboutme/perfil.png";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import perfilDan from '../../../../assets/imgs/sections/aboutme/perfil.png';
+import pc from '../../../../assets/imgs/sections/aboutme/pc_coding_psd.jpg';
+import learning from '../../../../assets/imgs/sections/aboutme/learning.jpg';
+import teamwork from '../../../../assets/imgs/sections/aboutme/teamwork.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const AboutmeContainer = () => {
-
   const navigate = useNavigate();
 
   return (
     <section id="aboutme-section" className="aboutme-container">
-    <button className="btn-navigator" onClick={() => navigate("/")}>Init.</button>
+      <button className="btn-navigator" onClick={() => navigate('/')}>
+        Init.
+      </button>
       <div className="aboutme-container-title">
         <span>&lt;h2&gt;</span>
         <h2>About me</h2>
         <span>&lt;/h2&gt;</span>
       </div>
       <div className="aboutme-container-body">
-        <img src={perfilDan} alt="perfil-dan" />
-        <article>
+        <article className="aboutme-profile">
           <p>
             <br />
             I'm Daniel Abad Noriega, a dedicated frontend web developer with a
@@ -25,7 +28,11 @@ const AboutmeContainer = () => {
             high-quality work that leaves a lasting impression.
             <br />
           </p>
+          <img src={perfilDan} alt="perfil-dan" />
+        </article>
 
+        <article>
+          <img src={pc} alt="pc-coding" />
           <p>
             <br />
             My journey in web development began with a fascination for
@@ -35,38 +42,34 @@ const AboutmeContainer = () => {
             the latest industry trends and practices.
             <br />
           </p>
+        </article>
 
+        <article>
           <p>
             <br />
             One of my key attributes is my unwavering commitment to excellence.
             I approach every project with meticulous attention to detail,
             ensuring clean, efficient, and well-structured code. By focusing on
-            responsive design and intuitive user interfaces, I aim to create
-            seamless experiences that captivate users and enhance their
-            interactions.
+            responsive design and intuitive user interfaces. Continual
+            improvement is at the core of my work ethic. In the fast-paced world
+            of web development, I recognize the importance of staying up-to-date
+            with emerging technologies and best practices.
             <br />
           </p>
+          <div>
+            <img src={learning} alt="learning" />
+          </div>
+        </article>
 
+        <article>
+          <img src={teamwork} alt="teamwork" />
           <p>
-            <br />
-            Continual improvement is at the core of my work ethic. In the
-            fast-paced world of web development, I recognize the importance of
-            staying up-to-date with emerging technologies and best practices. In
-            addition to technical skills, I possess strong collaboration and
-            communication abilities. I thrive in both independent and
-            team-oriented environments, valuing open dialogue and constructive
-            feedback. By actively engaging with colleagues and stakeholders, I
-            ensure a seamless integration of ideas and produce exceptional
-            outcomes.
-            <br />
-          </p>
-
-          <p>
-            <br />
-            I believe in the power of collaboration and teamwork. I thrive in
-            diverse environments that value different perspectives and foster
-            creativity. Working alongside talented individuals who challenge and
-            inspire me allows me to push the boundaries of what is possible.
+            <br /> I possess strong collaboration and communication abilities. I
+            thrive in both independent and team-oriented environments, valuing
+            open dialogue and constructive feedback. I believe in the power of
+            collaboration and teamwork. Working alongside talented individuals
+            who challenge and inspire me allows me to push the boundaries of
+            what is possible.
             <br />
           </p>
         </article>

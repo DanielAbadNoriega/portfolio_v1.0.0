@@ -74,7 +74,7 @@
           color: colors.$primary-light;
           font-family: typografy.$font-body-boldItalic;
           font-size: 4px;
-          font-size: clamp(12px, 3vw, 22px);
+          font-size: clamp(12px, 2vw, 22px);
           margin: 0;
           z-index: 1;
         }

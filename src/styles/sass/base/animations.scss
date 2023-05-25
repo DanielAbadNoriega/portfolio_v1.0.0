@@ -1,4 +1,4 @@
-@use "../mixins/sections.scss" as _mixins;
+@use '../mixins/sections.scss' as _mixins;
 
 #header-section {
   @include _mixins.animation(slideInDown, 1.5s);
@@ -121,5 +121,65 @@
   90% {
     -webkit-transform: translateY(-6.4px);
     transform: translateY(-6.4px);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation tilt-in-left-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes tilt-in-left-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-left-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation tilt-in-right-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes tilt-in-right-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-right-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
   }
 }
