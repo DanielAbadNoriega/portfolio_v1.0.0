@@ -112,7 +112,7 @@
   }
   flex-grow: 1;
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
 }
 
 .btn-skill {
@@ -143,14 +143,32 @@
   justify-self: center;
 }
 
-.container-react-skill {
+.container-sass-skill {
   grid-area: 1 / 3 / 2 / 5;
   align-self: center;
   justify-self: center;
 }
 
-.container-git-skill {
+.container-react-skill {
   grid-area: 2 / 3 / 3 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.container-typescript-skill {
+  grid-area: 3 / 1 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.container-nodejs-skill {
+  grid-area: 3 / 2 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.container-git-skill {
+  grid-area: 3 / 3 / 4 / 5;
   align-self: center;
   justify-self: center;
 }
@@ -178,6 +196,21 @@
 #git-skill:hover {
   @include _mixins.btn-hover(
     url("../../../assets/imgs/iconos_languages/git_hover.png")
+  );
+}
+#sass-skill:hover {
+  @include _mixins.btn-hover(
+    url("../../../assets/imgs/iconos_languages/sass_hover.png")
+  );
+}
+#nodejs-skill:hover {
+  @include _mixins.btn-hover(
+    url("../../../assets/imgs/iconos_languages/nodejs_hover.png")
+  );
+}
+#typescript-skill:hover {
+  @include _mixins.btn-hover(
+    url("../../../assets/imgs/iconos_languages/typescript_hover.png")
   );
 }
 

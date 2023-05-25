@@ -1,8 +1,12 @@
 import html from '../assets/imgs/iconos_languages/html.png';
 import css from '../assets/imgs/iconos_languages/css.png';
+import sass from '../assets/imgs/iconos_languages/sass.png';
 import js from '../assets/imgs/iconos_languages/js.png';
 import react from '../assets/imgs/iconos_languages/react.png';
 import git from '../assets/imgs/iconos_languages/git.png';
+import nodejs from '../assets/imgs/iconos_languages/nodejs.png';
+import typescript from '../assets/imgs/iconos_languages/typescript.png';
+import firebase from '../assets/imgs/iconos_languages/firebase.png';
 
 export const SKILLS = [
   {
@@ -33,6 +37,15 @@ export const SKILLS = [
     },
   },
   {
+    name: 'sass',
+    img: sass,
+    content: {
+      Basic: 'variables, nesting, mixins, extend/inheritance, interpolation...',
+      'At-rules': '@use, @import, @mixin & @include, @function, @extend...',
+      Operators: 'Equality, relational, numeric, string, Boolean.',
+    },
+  },
+  {
     name: 'js',
     img: js,
     content: {
@@ -53,6 +66,16 @@ export const SKILLS = [
     },
   },
   {
+    name: 'typescript',
+    img: typescript,
+    content: {
+      Primitives: 'any, literals, union and intesection Types.',
+      'Tuples-primitives': 'tuples.',
+      'Meta-Types': 'Conditional Types, discriminate Types, indexed Types',
+      'Language Extensions': 'Enums, Interfaces'
+    },
+  },
+  {
     name: 'git',
     img: git,
     content: {
@@ -61,6 +84,19 @@ export const SKILLS = [
       'Work with branchs': 'branch, checkout, merge, rebase.',
       'Work through the command line and with graphical tools':
         ' GitKraken or GitHub Desktop.',
+    },
+  },
+  {
+    name: 'nodejs',
+    img: nodejs,
+    content: {
+      Basic:
+        'Modules, npm, error handling (js errors, system errors, use specified errors...).',
+      'Asynchronous Programming':
+        'promises, async/await, callbacks, setTimeout, setInterval...',
+      'Work with APIs': 'http module, axios, fetch.',
+      Authenticacion: 'jsonwebtoken',
+      'Working with Database': 'Mongoose',
     },
   },
 ];
