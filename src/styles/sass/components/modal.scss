@@ -1,5 +1,5 @@
-@use "../variables/v-colors.scss" as colors;
-@use "../variables/v-typografy.scss" as typografy;
+@use '../variables/v-colors.scss' as colors;
+@use '../variables/v-typografy.scss' as typografy;
 
 .modal-container {
   /*   box-shadow: inset -2px -2px 20px (#b3c1dd),
@@ -17,12 +17,16 @@
     #30d9e4,
     #5ffbf1
   );
-  h1{
+  h1 {
     font-family: typografy.$font-title;
     color: colors.$primary;
+    font-size: clamp(60px, 6vw, 40px);
   }
-  strong{
-    font-family: typografy.$font-title;
-    color: colors.$primary-4;
+  ul {
+    font-size: clamp(12px, 2vw, 22px);
+    strong {
+      font-family: typografy.$font-title;
+      color: colors.$primary-4;
+    }
   }
 }

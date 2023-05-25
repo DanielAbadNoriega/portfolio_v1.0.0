@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import SkillModalBody from "../skillsModalBody/skillModalBody";
+import SkillModalBody from '../skillsModalBody/skillModalBody';
 
 const SkillModal = ({ name, content }) => {
   return (
     <div
-      className="modal modal-sm modal-lg fade"
+      className="modal modal-md modal-lg modal-xl fade"
       id={`${name}-skill-modal`}
       tabIndex="-1"
       aria-labelledby={`${name}-skill-modalLabel`}
@@ -15,7 +15,7 @@ const SkillModal = ({ name, content }) => {
         <div className="modal-content modal-container">
           {/* HEADER */}
           <div className="modal-header">
-            <h1 className="modal-title fs-5" id={`${name}-skill-modalLabel`}>
+            <h1 className="modal-title fs-1" id={`${name}-skill-modalLabel`}>
               {name.toUpperCase()}
             </h1>
             <button
@@ -47,6 +47,6 @@ const SkillModal = ({ name, content }) => {
 SkillModal.propTypes = {
   name: PropTypes.string.isRequired,
   content: PropTypes.object.isRequired,
-}
+};
 
 export default SkillModal;

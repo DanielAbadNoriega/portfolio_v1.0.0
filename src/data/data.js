@@ -6,7 +6,7 @@ import react from '../assets/imgs/iconos_languages/react.png';
 import git from '../assets/imgs/iconos_languages/git.png';
 import nodejs from '../assets/imgs/iconos_languages/nodejs.png';
 import typescript from '../assets/imgs/iconos_languages/typescript.png';
-import firebase from '../assets/imgs/iconos_languages/firebase.png';
+// import firebase from '../assets/imgs/iconos_languages/firebase.png';
 
 export const SKILLS = [
   {
