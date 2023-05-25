@@ -1,5 +1,6 @@
 import React from 'react';
 import perfilDan from '../../../../assets/imgs/sections/aboutme/perfil.png';
+import perfilDan_2 from '../../../../assets/imgs/sections/aboutme/perfil_2.jpeg';
 import pc from '../../../../assets/imgs/sections/aboutme/pc_coding_psd.jpg';
 import learning from '../../../../assets/imgs/sections/aboutme/learning.jpg';
 import teamwork from '../../../../assets/imgs/sections/aboutme/teamwork.jpg';
@@ -28,7 +29,8 @@ const AboutmeContainer = () => {
             high-quality work that leaves a lasting impression.
             <br />
           </p>
-          <img src={perfilDan} alt="perfil-dan" />
+          {/* <img src={perfilDan} alt="perfil-dan" /> */}
+          <img src={perfilDan_2} alt="perfil-dan" />
         </article>
 
         <article>
