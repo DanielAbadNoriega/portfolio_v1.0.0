@@ -1,6 +1,6 @@
 import React from 'react';
 // import perfilDan from '../../../../assets/imgs/sections/aboutme/perfil.png';
-import perfilDan_2 from '../../../../assets/imgs/sections/aboutme/perfil_2.jpeg';
+import perfilDan_2 from '../../../../assets/imgs/sections/aboutme/perfil_2.jpg';
 import pc from '../../../../assets/imgs/sections/aboutme/pc_coding.png';
 import learning from '../../../../assets/imgs/sections/aboutme/learning.png';
 import teamwork from '../../../../assets/imgs/sections/aboutme/teamwork.png';
