@@ -1,9 +1,9 @@
 import React from 'react';
-import perfilDan from '../../../../assets/imgs/sections/aboutme/perfil.png';
+// import perfilDan from '../../../../assets/imgs/sections/aboutme/perfil.png';
 import perfilDan_2 from '../../../../assets/imgs/sections/aboutme/perfil_2.jpeg';
-import pc from '../../../../assets/imgs/sections/aboutme/pc_coding_psd.jpg';
-import learning from '../../../../assets/imgs/sections/aboutme/learning.jpg';
-import teamwork from '../../../../assets/imgs/sections/aboutme/teamwork.jpg';
+import pc from '../../../../assets/imgs/sections/aboutme/pc_coding.png';
+import learning from '../../../../assets/imgs/sections/aboutme/learning.png';
+import teamwork from '../../../../assets/imgs/sections/aboutme/teamwork.png';
 import { useNavigate } from 'react-router-dom';
 
 const AboutmeContainer = () => {
