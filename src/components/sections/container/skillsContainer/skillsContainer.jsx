@@ -1,8 +1,9 @@
-import React from "react";
-import { SKILLS, SKILLS_BACK, SKILLS_FRONT } from "../../../../data/data";
-import SkillButton from "../../pure/skillsButton/skillButton";
-import SkillModal from "../../pure/skillsModal/skillModal";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { AiFillHome } from 'react-icons/ai';
+import { SKILLS, SKILLS_BACK, SKILLS_FRONT } from '../../../../data/data';
+import SkillButton from '../../pure/skillsButton/skillButton';
+import SkillModal from '../../pure/skillsModal/skillModal';
+import { useNavigate } from 'react-router-dom';
 
 const SkillsContainer = () => {
   const skills = SKILLS;
@@ -15,8 +16,8 @@ const SkillsContainer = () => {
 
   return (
     <section id="skills-section">
-      <button className="btn-navigator" onClick={() => navigate("/")}>
-        Init.
+      <button className="btn-navigator" onClick={() => navigate('/')}>
+        <AiFillHome />
       </button>
       <div className="skill-section-title">
         <span>&lt;h2&gt;</span>
@@ -51,9 +52,8 @@ const SkillsContainer = () => {
           </div>
           <p>
             <br />
-            Look down my skills that i have until now and please{" "}
-            <span>press each icon image</span> to see the full content about
-            each one.
+            Look down my skills that i have until now and please <span>press each icon image</span> to see the full
+            content about each one.
             <br />
           </p>
         </article>
@@ -65,16 +65,11 @@ const SkillsContainer = () => {
             return (
               <div key={index} className={`container-${skill.name}-skill`}>
                 <SkillButton name={skill.name} img={skill.img}></SkillButton>
-                <SkillModal
-                  key={index}
-                  name={skill.name}
-                  content={skill.content}
-                ></SkillModal>
+                <SkillModal key={index} name={skill.name} content={skill.content}></SkillModal>
               </div>
             );
           })}
         </div>
-        
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-// import perfilDan from '../../../../assets/imgs/sections/aboutme/perfil.png';
+import { AiFillHome } from 'react-icons/ai';
 import perfilDan_2 from '../../../../assets/imgs/sections/aboutme/perfil_2.jpg';
 import pc from '../../../../assets/imgs/sections/aboutme/pc_coding.png';
 import learning from '../../../../assets/imgs/sections/aboutme/learning.png';
@@ -12,7 +12,7 @@ const AboutmeContainer = () => {
   return (
     <section id="aboutme-section" className="aboutme-container">
       <button className="btn-navigator" onClick={() => navigate('/')}>
-        Init.
+        <AiFillHome />
       </button>
       <div className="aboutme-container-title">
         <span>&lt;h2&gt;</span>
@@ -23,10 +23,9 @@ const AboutmeContainer = () => {
         <article className="aboutme-profile">
           <p>
             <br />
-            I'm Daniel Abad Noriega, a dedicated frontend web developer with a
-            passion for crafting exceptional digital experiences. With a strong
-            skill set and a commitment to continuous growth, I strive to deliver
-            high-quality work that leaves a lasting impression.
+            I'm Daniel Abad Noriega, a dedicated frontend web developer with a passion for crafting exceptional digital
+            experiences. With a strong skill set and a commitment to continuous growth, I strive to deliver high-quality
+            work that leaves a lasting impression.
             <br />
           </p>
           {/* <img src={perfilDan} alt="perfil-dan" /> */}
@@ -37,11 +36,9 @@ const AboutmeContainer = () => {
           <img src={pc} alt="pc-coding" />
           <p>
             <br />
-            My journey in web development began with a fascination for
-            technology and its ability to transform the way we interact with the
-            digital world. This curiosity led me to specialize in frontend
-            development, where I have honed my skills and stayed up-to-date with
-            the latest industry trends and practices.
+            My journey in web development began with a fascination for technology and its ability to transform the way
+            we interact with the digital world. This curiosity led me to specialize in frontend development, where I
+            have honed my skills and stayed up-to-date with the latest industry trends and practices.
             <br />
           </p>
         </article>
@@ -49,13 +46,11 @@ const AboutmeContainer = () => {
         <article>
           <p>
             <br />
-            One of my key attributes is my unwavering commitment to excellence.
-            I approach every project with meticulous attention to detail,
-            ensuring clean, efficient, and well-structured code. By focusing on
-            responsive design and intuitive user interfaces. Continual
-            improvement is at the core of my work ethic. In the fast-paced world
-            of web development, I recognize the importance of staying up-to-date
-            with emerging technologies and best practices.
+            One of my key attributes is my unwavering commitment to excellence. I approach every project with meticulous
+            attention to detail, ensuring clean, efficient, and well-structured code. By focusing on responsive design
+            and intuitive user interfaces. Continual improvement is at the core of my work ethic. In the fast-paced
+            world of web development, I recognize the importance of staying up-to-date with emerging technologies and
+            best practices.
             <br />
           </p>
           <div>
@@ -66,12 +61,10 @@ const AboutmeContainer = () => {
         <article>
           <img src={teamwork} alt="teamwork" />
           <p>
-            <br /> I possess strong collaboration and communication abilities. I
-            thrive in both independent and team-oriented environments, valuing
-            open dialogue and constructive feedback. I believe in the power of
-            collaboration and teamwork. Working alongside talented individuals
-            who challenge and inspire me allows me to push the boundaries of
-            what is possible.
+            <br /> I possess strong collaboration and communication abilities. I thrive in both independent and
+            team-oriented environments, valuing open dialogue and constructive feedback. I believe in the power of
+            collaboration and teamwork. Working alongside talented individuals who challenge and inspire me allows me to
+            push the boundaries of what is possible.
             <br />
           </p>
         </article>
